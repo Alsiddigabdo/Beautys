@@ -13,15 +13,26 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Messiri&display=swap" rel="stylesheet">
     
     <title>unique</title>
     <style>
+    
+    * {
+      font-family: 'Messiri', sans-serif !important;
+    }
+@import url('https://fonts.googleapis.com/css2?family=Messiri&display=swap');
+
+
 /* إزالة الهوامش على أحجام الجوال */
 @media screen and (max-width: 767px) {
     body, html {
+      
         margin: 0 !important;
         padding: 0 !important;
         width: 100% !important;
+        font-family: 'Messiri', sans-serif;
+
         
     }
 }
@@ -29,6 +40,7 @@
 /* إزالة الهوامش بشكل قطعي على أحجام الجوال */
 @media screen and (max-width: 767px) {
     body {
+      font-family: 'Messiri', sans-serif;
         margin: 0 !important;
         padding: 0 !important;
         width: 100vw !important;
@@ -179,6 +191,7 @@ transform: translateX(0);
 .social-icons a i {
   font-size: 24px;
   color: #000000;
+  font-family: 'Messiri', sans-serif;
 }
 
 .contact-form input[type="email"] {
@@ -256,6 +269,7 @@ transform: translateX(0);
     animation: textAnimation 2s ease-in-out; /* إضافة حركة أنميشن للنص */
     
     font-weight: bold;
+    font-family: 'Reem Kufi', sans-serif;
     
     
 
@@ -319,7 +333,7 @@ h{
 font-weight: bold;
 transform: skew(-10deg);
   margin-bottom: 10px;
-  font-family: 'Montserrat', sans-serif; /* استخدام خط Montserrat من Google Fonts */
+  font-family: 'Messiri', sans-serif;
 
 }
 h1 {
@@ -332,8 +346,9 @@ margin-left:0px;
   font-weight: bold;
   transform: skew(-10deg);
   margin-bottom: 5px;
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: underline; /* إضافة خط عريض تحت النص */
+  @import url('https://fonts.googleapis.com/css2?family=Messiri&display=swap');
+ font-family: 'Messiri', sans-serif;
+  text-decoration: underline; /* إضاف خط عريض تحت النص */
 }
 h2 {
   margin-top :100px;
@@ -345,7 +360,7 @@ h2 {
   font-weight: bold;
   transform: skew(-10deg);
   margin-bottom: -100px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Messiri', sans-serif;
   text-decoration: underline; /* إضافة خط عريض تحت النص */
 }
 .card:hover {
@@ -691,6 +706,28 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+
+/* تخصيص الأيقونات */
+        .icon {
+            font-size: 24px;
+            margin-right: 5px;
+            color: #0071bc;
+        }
+
+        /* تخصيص العناوين */
+        h3 {
+            font-family: 'Messiri', sans-serif;
+            color: #0071bc;
+            font-size :20px;
+        }
+
+        /* تخصيص النصوص العادية */
+        p {
+            font-family: 'Messiri', sans-serif;
+            color: black;
+        }
+    
+
 </style>
 </head> 
 
@@ -703,6 +740,15 @@ a:hover {
   
   <button>اقرأ المزيد</button>
 </div>
+    <h3><i class="icon fas fa-award"></i>  أضف مشروع</h3>
+    <p>أضف تفاصيل المشروع الذي تحتاج إنجازه والمهارات المطلوبة واحصل على عروض المستقلين المتخصصين في دقائق.</p>
+
+    <h3><i class="icon fas fa-check-circle"></i>  اختر المستقل المناسب</h3>
+    <p>قارن عروض المستقلين وتصفح ملفاتهم وتقيماتهم وأعمالهم، تفاوض معهم عبر الرسائل واختر الأفضل لتنفيذ مشروعك.</p>
+
+    <h3><i class="icon fas fa-tasks"></i> 
+    استلم المشروع</h3>
+    <p>سيعمل المستقل الذي اخترته على مشروعك ويتابع معك حتى حصولك على نتائج العمل المتفق عليه وتسليم المشروع.</p>
     <div class="toolbar">
       <!-- أيقونة القائمة -->
       <a href="#" class="icon menu-icon"><i class="fas fa-bars"></i></a>
