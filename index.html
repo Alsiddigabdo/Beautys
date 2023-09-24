@@ -16,15 +16,7 @@
     
     <title>unique</title>
     <style>
-/* إزالة الهوامش على أحجام الجوال */
-@media screen and (max-width: 767px) {
-    body, html {
-        margin: 0 !important;
-        padding: 0 !important;
-        width: 100% !important;
-        
-    }
-}
+
 
 /* إزالة الهوامش بشكل قطعي على أحجام الجوال */
 @media screen and (max-width: 767px) {
@@ -33,6 +25,7 @@
         padding: 0 !important;
         width: 100vw !important;
         overflow-x: hidden !important;
+
     }
     .container, .container-fluid {
         padding: 0 !important;
@@ -761,6 +754,13 @@ a:hover {
             direction: rtl;
             text-align: right ;
         }
+        h5 {
+          font-family: 'Messiri', sans-serif;
+          color: #0071bc;
+          font-size: 20px;
+          direction: rtl;
+          text-align: center ;
+        }
 
         /* تخصيص النصوص العادية */
         p {
@@ -769,6 +769,39 @@ a:hover {
             text-align: right ;
         }
     
+.img-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image-box {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .image-box img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        /* تخصيص التصميم للهواتف */
+        @media (max-width: 768px) {
+            .img-container {
+                display: block;
+                /* تم تغيير العرض لعرض كل صورة في سطر واحد */
+            }
+
+            .image-box {
+                width: 100%;
+                margin: 10px 0;
+                /* تعديل المسافة بين الصور عند العرض الهاتفي */
+            }
+        }
+
 
 </style>
 </head> 
@@ -865,9 +898,47 @@ style="display: block; margin: 0 auto; width: 150px; height: 200px;">
                         
                         </div>
         
+    <div class="img-container">
+        <!-- الصورة الأولى -->
+        <div class="image-box">
+            <img src="https://icon-icons.com/downloadimage.php?id=150101&root=2488/PNG/512/&file=developing_ideas_icon_150101.png" alt="صورة 1">
+            <h5>نص الصورة 1</h5>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="image-box">
+            <img src="https://icon-icons.com/downloadimage.php?id=150042&root=2485/PNG/512/&file=value_icon_150042.png" alt="صورة 2">
+            <h5>نص الصورة 2</h5>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="image-box">
+            <img src="https://icon-icons.com/downloadimage.php?id=149999&root=2484/PNG/512/&file=clock_icon_149999.png" alt="صورة 3">
+            <h5>نص الصورة 3</h5>
+        </div>
+
+        <!-- الصورة الرابعة -->
+        <div class="image-box">
+            <img src="https://icon-icons.com/downloadimage.php?id=150050&root=2486/PNG/512/&file=diploma_icon_150050.png" alt="صورة 4">
+            <h5>نص الصورة 4</h5>
+        </div>
+
+        <!-- الصورة الخامسة -->
+        <div class="image-box">
+            <img src="https://icon-icons.com/downloadimage.php?id=150173&root=2491/PNG/512/&file=digital_marketing_icon_150173.png" alt="صورة 5">
+            <h5>نص الصورة 5</h5>
+        </div>
+
+        <!-- الصورة السادسة -->
+        <div class="image-box">
+            <img src="https://icon-icons.com/downloadimage.php?id=150004&root=2484/PNG/512/&file=forum_icon_150004.png" alt="صورة 6">
+            <h5>نص الصورة 6</h5>
+        </div>
+    </div>
 
 
 
+  
 <div class="col-lg-10 offset-lg-1 pt-5 pb-5 bg- text-dark">
   <div id="client-testimonial-carousel" class="carousel slide" data-ride="carousel" style="height:200px;">
     <div class="carousel-inner" role="listbox">
