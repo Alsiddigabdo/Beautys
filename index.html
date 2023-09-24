@@ -1,7 +1,7 @@
-<!doctype html>
-<html> 
- <head> 
-<meta charset="UTF-8"> 
+<!DOCTYPE html>
+<html lang="ar"> <!-- لغة الموقع العربية -->
+<head>
+    <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"> 
@@ -11,77 +11,127 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> 
-<style >
- body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>unique</title>
+    <style>
+/* إزالة الهوامش على أحجام الجوال */
+@media screen and (max-width: 767px) {
+    body, html {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        
+    }
+}
+
+/* إزالة الهوامش بشكل قطعي على أحجام الجوال */
+@media screen and (max-width: 767px) {
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+    .container, .container-fluid {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+.white { 
+  height: 100vh;
+  &:before { 
+    z-index: 1000;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60vh;
+    background-image: linear-gradient(-180deg, #FFFFFF 0%, rgba(255,255,255,0.00) 100%) }
+  &:after { 
+    z-index: 1000;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20vh;
+    background-image: linear-gradient(0deg, #EBEBEB 0%, rgba(235,235,235,0.00) 100%) }}
+
+.squares {
   height: 100%;
-  font-family: 'Open Sans', sans-serif;
-background: linear-gradient(45deg, pink, violet);
-  
-  background-size: 100% auto; /* يجعل اللون يتدرج عند التمرير لأعلى */
-}
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden }
+.square {
+  animation: squares 9.5s linear infinite;
+  align-self: flex-end;
+  width: 1em;
+  height: 1em;
+  transform: translateY(100%);
+  background: #ebebeb;  
+  &:nth-child(2) { 
+    height: 1.5em;  
+    width: 3em;   
+    animation-delay: 1s;
+    animation-duration: 17s; 
+    -webkit-filter: blur(5px) }
+  &:nth-child(3) { 
+    height: 2em;    
+    width: 1em;   
+    animation-delay: 1.5s;
+    animation-duration: 8s; 
+    -webkit-filter: blur() }
+  &:nth-child(4) { 
+    height: 1em;    
+    width: 1.5em; 
+    animation-delay: 0.5s;
+    -webkit-filter: blur(3px);
+    animation-duration: 13s }
+  &:nth-child(5) { 
+    height: 1.25em; 
+    width: 2em;   
+    animation-delay: 4s;
+    -webkit-filter: blur(2px);
+    animation-duration: 11s }
+  &:nth-child(6) { 
+    height: 2.5em;  
+    width: 2em;   
+    animation-delay: 2s;
+    -webkit-filter: blur(1px);
+    animation-duration: 9s }
+  &:nth-child(7) { 
+    height: 5em;    
+    width: 2em;   
+    -webkit-filter: blur(2.5px);
+    animation-duration: 12s }
+  &:nth-child(8) { 
+    height: 1em;    
+    width: 3em;   
+    animation-delay: 5s;
+    -webkit-filter: blur(6px);
+    animation-duration: 18s }
+  &:nth-child(9) {
+    height: 1.5em; 
+    width: 2em; 
+    -webkit-filter: blur(0.5px);
+    animation-duration: 9s }
+  &:nth-child(9) {
+    height: 3em;
+    width: 2.4em;
+    animation-delay: 6s;
+    -webkit-filter: blur(0.5px);
+    animation-duration: 12s }}
 
-h1 {
-  font-size: 36px; /* حجم عنوان الصفحة */
-  color: #ff0000; /* لون عنوان الصفحة */
-}
+@keyframes squares { 
+  from { transform: translateY(100%) rotate(-50deg) }
+  to   { transform: translateY(calc(-100vh + -100%)) rotate(20deg) }}
+View C
 
-p {
-  font-size: 18px; /* حجم الفقرة العادية */
-  color: #666666; /* لون الفقرة العادية */
-}
 
-@media (min-width: 1400px) {
-  /* تعديل تنسيق الصفحة للأجهزة اللوحية والحواسيب */
-  body {
-    font-size: 18px;
-  }
 
-  h1 {
-    font-size: 48px;
-  }
-
-  p {
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 992px) {
-  /* تعديل تنسيق الصفحة للشاشات الكبيرة */
-  body {
-    font-size: 20px;
-  }
-
-  h1 {
-    font-size: 64px;
-  }
-}
-
-/* استهداف الصفحة بالكامل بدون هوامش */
-#slider, .products-container, .form-container, footer {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-/* استهداف الأسلوب الخاص بالفوتر */
-footer {
-  background: linear-gradient(to bottom right, rgba(192, 57, 232, 0.8), rgba(95, 0, 255, 0.8));
- 
- /* تدرج من اللون الخفيف #E45E9D إلى اللون الأبيض #FFFFFF */
-  color: #fff;
-  
-  padding: 20px;
-  text-align: center;
-}
-
-/* استهداف أسلوب الروابط السريعة */
-.footer-column ul li a {
-  color: white;
-  text-decoration: none;
-}
 
 /* استهداف النجوم وتحديد لونها إلى الذهبي */
 .fa-star {
@@ -95,18 +145,20 @@ footer {
 
   .slider {
     margin :0px;
+    padding-top: 0px;
 display: flex;
 justify-content: center;
 align-items: center;
-height: 200px;
-overflow: hidden;
+height: 300px;
+width :100%;
+overflow:hidden ;
 
 }
 
 .slider img {
 display: inline-block;
 height: 100px;
-width: auto;
+width: 100%;
 margin: 0 0px;
 border-radius: 50%;
 cursor: pointer;
@@ -132,50 +184,7 @@ transform: translateX(0);
 }
 
 
-/* تحديد الأسلوب الخاص بالفوتر */
-footer {
-  margin :;
-    font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(to bottom right, rgba(192, 57, 232, 0.8), rgba(95, 0, 255, 0.8));
- 
-      backdrop-filter: blur(10px) 
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
 
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.footer-column {
-  flex-basis: 30%;
-}
-
-h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-ul li {
-  margin-bottom: 5px;
-}
-
-ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-.footer-bottom {
-  font-size: 14px;
-}
 .social-icons {
   display: flex;
   justify-content: space-between;
@@ -186,7 +195,7 @@ ul li a {
 }
 
 .social-icons a {
-  font-size: 24px;
+  font-size: 26px;
   color: #000;
   text-decoration: none;
 }
@@ -194,761 +203,876 @@ ul li a {
 .social-icons a:hover {
   transform: scale(1.2);
 }
-.products-container {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  margin: -10px; /* إزالة الهوامش الافتراضية بين الكاردز */
-}
 
-.product-card {
-  flex: 0 0 auto;
-  margin: 15px; /* إضافة هوامش حول الكارد */
-  text-align: center;
-  background: linear-gradient(to bottom, #FFB6C1, #fff);
+
+
+
+
+
+
+
+
+
+.footer {
+  background-color: #0071bc ;
+  color: #ffff00 ;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-.product-card p{
-  color: white;
-  
-}
-.product-card h7,
-.product-card h8 {
-  color: black;
-  font-size: 16px;
-}
-  .product-card img {
-    width: 120px;
-    height: 120px;
-    transition: transform 0.2s;
-    
-  }
-
-  .product-card img:hover {
-    transform: scale(1.1);
-  }
-
-  .add-to-cart {
-    margin-top: 10px;
-  }
-.product-card button.add-to-cart {
-  background: linear-gradient(to bottom right, rgba(192, 57, 232, 0.8), rgba(95, 0, 255, 0.8));
- 
-      backdrop-filter: blur(10px) 
-  border: none;
-  color: white;
-  padding: 10px 20px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  margin-top :20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  animation: slide-in 1s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.footer-left img {
+  max-width: 100px;
+  margin-top:0px ;
+  margin-right: 0px;
+  left:100px;
+  top:80px ;
+}
+
+.social-icons {
+  
+  display: flex;
+  gap: 10px;
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.social-icons a i {
+  font-size: 24px;
+  color: #000000;
+}
+
+.contact-form input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color:  #ffff00 ;
+  color: #0071bc ;
+  border: none;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.product-card button.add-to-cart:hover {
-  background-color: #FF69B4;
-}
-.product-card img:hover {
-  transform: scale(1.1);
+.footer-right {
+  animation: slide-in 1s ease-in-out;
 }
 
-/* تعيين لون النجوم إلى ذهبي */
-    .fa-star {
-      color: gold;
-    }
-
-    /* تحديد حجم النجوم */
-    .fa-star {
-      font-size: 16px; /* يمكنك تغيير هذا الحجم إلى ما تريد */
-    }
-
-.form-container {
-  margin :0px;
-        width: 80%;
-        margin: 20px auto;
-        padding: 15px;
-        background: linear-gradient(to bottom right, rgba(192, 57, 232, 0.8), rgba(95, 0, 255, 0.8));
- 
-      backdrop-filter: blur(10px) 
-        color: white;
-        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
-      }
-      h2{
-        color:white ;
-      }
-      .input-cnt {
-         display: flex; /* display the icon and the input in a line */
-         margin-bottom: 15px;
-      }
-      .input-cnt:last-child {
-         margin-bottom: 0px;
-      }
-      .input-cnt > i {
-         min-width: 40px; /* set a minimum width for the icon */
-         padding: 10px; /* make sure the icon is centered vertically */
-         text-align: center; /* horizontally center the icon */
-         background: lightgrey;
-         border-top-left-radius: 20px;
-         border-bottom-left-radius: 20px;
-         color: #0076ff;
-      }
-      /* change styles when focused */
-      .input-cnt:hover > i {
-         background: green;
-         color: white;
-      }
-      /* style the input and textarea */
-      .input-cnt > input[type="text"], .input-cnt > textarea {
-         outline: none;
-         border: none;
-         padding: 10px;
-         border: 1px solid lightgrey;
-         border-top-right-radius: 20px;
-         border-bottom-right-radius: 20px;
-         width: 100%;
-      }
-      /* center textarea icon and increase size */
-      .textarea-icon {
-         padding: 60px 10px !important; /* top and bottom paddings are set to 60px */
-         color:;
-      }
-      /* style the submit button */
-      .input-cnt > input[type="submit"] {
-         border: none;
-         border-radius: 20px;
-         outline: none;
-         width: 75%;
-         margin: 0 auto;
-         font-size: 105%;
-         padding: 8px;
-         color: white;
-         background: white;
-         transition-duration: .5s;
-      }
-      /* add a hover effect for the submit button */
-/* style the submit button with deep pink color */
-.input-cnt > input[type="submit"] {
-   background: linear-gradient(to bottom right, rgba(192, 57, 232, 0.8), rgba(95, 0, 255, 0.8));
- 
-      backdrop-filter: blur(10px) 
-   color: white;
-}
-
-    .accordion {
-      width: 80%;
-      margin: 20px auto;
-      
-      max-width: 600px;
-      background: linear-gradient(to bottom right, rgba(192, 57, 232, 0.8), rgba(95, 0, 255, 0.8));
- 
-      backdrop-filter: blur(10px) 
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .accordion-item {
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    .accordion-header {
-      text-align: center ;
-      padding: 10px 20px;
-      cursor: pointer;
-      color:white ;
-    }
-
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.2s ease-out;
-      padding: 0 20px;
-    }
-
-    .accordion-content p {
-      color: whitesmoke;
-      margin: 10px 0;
-    }
-
-    .accordion-item:not(:last-child) .accordion-content {
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    input[type="checkbox"] {
-      display: none;
-    }
-
-    input[type="checkbox"]:checked + .accordion-header + .accordion-content {
-      max-height: 500px; /* Adjust this value based on your content */
-    }
-
-    input[type="checkbox"]:checked + .accordion-header::before {
-      content: "\25b2"; /* Unicode for an upward-pointing triangle */
-    }
-      .container {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: 20px;
-    scroll-behavior: smooth;
-  }
-
-  .section {
-    width: 120px;
-    flex-shrink: 0;
-    margin: 1px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-
-  .section img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    background-color :#fff;
-  }
-
-  .section a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-  }
-
-  .section p {
-    margin: 0;
-  }
-
-  .section:hover img {
-    transform: scale(1.1);
-  }
-  .transparent-bar {
-  position: fixed;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 192, 203, 0.7); /* لون pink مع شفافية 0.7 */
-  border-radius: 30px;
-  padding: 10px 20px;
+.footer-payment {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fade-in 1s ease-in-out;
 }
 
-.transparent-bar a {
-  margin: 0 15px;
-  color: white;
-  font-size: 24px;
+.footer-payment i {
+  font-size: 36px;
+  margin: 0 10px;
+}
+
+.footer-text {
+  margin-top: 20px;
+  animation: fade-in 1s ease-in-out;
+}
+/* تنسيق الفوتر لشاشات الجوال */
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-left,
+  .social-icons,
+  .footer-right,
+  .footer-payment,
+  .footer-text {
+    margin: 10px 0;
+  }
+}
+/* تنسيق النافبار */
+.navbar {
+    background-image: url('/1695559763137.jpg');
+    width: 100%;
+    height: 400px; /* ارتفاع الصورة */
+    background-size: 100% 400px; /* عرض الصورة على كامل الشاشة وارتفاع 400 بكسل */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+/* تصميم النص */
+.navbar p {
+    font-size: 26px;
+    color: #fff ; /* لون النص */
+    font-weight: bold;
+    margin-bottom: 20px; /* تباعد بين النص والزر */
+    animation: textAnimation 2s ease-in-out; /* إضافة حركة أنميشن للنص */
+    
+    font-weight: bold;
+    
+    
+
+}
+/* تعريف الأنميشن */
+@keyframes textAnimation {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* تصميم الزر */
+.navbar button {
+    background-color: #007bff; /* لون خلفية الزر */
+    color: #fff; /* لون النص على الزر */
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top :200px ;
+}
+
+
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width :100%;
+    
+}
+
+.card {
+width: calc(33.33% - 20px); /* تقسيم الشاشة إلى 3 أجزاء متساوية مع هوامش */
+    height: 250px;
+    margin: 10px;
+    margin-bottom: 10px;
+    background-color: #fff ;
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; /* تغيير ترتيب العناصر إلى عمودي */
+
+}
+/*الخطوط المستخدمة */
+
+h{
+  color:#0071bc ;
+  font-size :18px ;
+  font-style: bold;
+font-weight: bold;
+transform: skew(-10deg);
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif; /* استخدام خط Montserrat من Google Fonts */
+
+}
+h1 {
+  margin-top :10px;
+margin-left:0px;
+  text-align:center ;
+  font-size: 40px;
+  color: #0071bc;
+  font-style: bold;
+  font-weight: bold;
+  transform: skew(-10deg);
+  margin-bottom: 5px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: underline; /* إضافة خط عريض تحت النص */
+}
+h2 {
+  margin-top :100px;
+  margin-right: 50px;
+  text-align:center ;
+  font-size: 40px;
+  color: #0071bc;
+  font-style: bold;
+  font-weight: bold;
+  transform: skew(-10deg);
+  margin-bottom: -100px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: underline; /* إضافة خط عريض تحت النص */
+}
+.card:hover {
+    transform: scale(1.05);
+    
+}
+
+.card-img {
+    width: 80%;
+    height: 50%;
+}
+
+.order-button {
+    background-color: #ffff00 ;
+    color: #0071bc ;
+    width: 70px; /* تعديل عرض الزر */
+    height: 70px; /* تعديل ارتفاع الزر */
+    border-radius: 50px 80px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* لإزالة تأثير التحتية على الزر */
+    margin: 10px auto 0; /* توسيط الزر وإضافة هامش علوي */
+
+}
+
+.card:hover .order-button {
+    background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* تقسيم الشاشة إلى 2 أجزاء متساوية مع هوامش عند الهواتف */
+    }
+}
+
+
+
+/*  كارد الدورات استهداف الكارد كونتينر */
+.your-custom-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* استهداف الكارد نفسه */
+.your-custom-card {
+    background-image: url('your-image.jpg'); /* استبدال 'your-image.jpg' بمسار الصورة الخاصة بك */
+    background-size: cover;
+    background-position: center;
+    width: 400px; /* تعديل عرض الكارد حسب الحاجة */
+    height: 400px; /* تعديل ارتفاع الكارد حسب الحاجة */
+    margin: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.your-custom-card:hover {
+    transform: scale(1.05); /* تكبير الكارد عند التحويم */
+}
+
+/* استهداف عنوان الكارد */
+.your-custom-card h3 {
+    color: black;
+    font-size: 24px; /* تعديل حجم العنوان حسب الحاجة */
+    margin-top: 20px;
+}
+
+/* استهداف النص الأربعة سطور تحت العنوان */
+.your-custom-card p {
+    color: black ;
+    font-size: 16px; /* تعديل حجم النص حسب الحاجة */
+    margin-top: 20px;
+    margin-bottom: 20px; /* تمديد المسافة بين النص والزر */
+}
+/* استهداف زر "سجل الآن" */
+.your-custom-card .animate-button {
+    display: inline-block;
+    background-color: #ffff00 ;
+    color: #0071bc ;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}.your-custom-card img{
+  width :100%;
+  height :40%;
+}
+.your-custom-card .animate-button:hover {
+    background-color: #005193; /* تغيير لون الزر عند التحويم */
+}
+/* تنسيق للشاشات الأصغر حجماً مثل الجوالات */
+@media (max-width: 768px) {
+    .your-custom-card-container {
+        flex-direction: column; /* تغيير اتجاه العرض ليصبح عموديًا */
+        align-items: center; /* مركزة العناصر عند العرض العمودي */
+    }
+
+    /* تغيير أبعاد الكارد للعرض العمودي */
+    .your-custom-card {
+        width: 90%; /* تصغير عرض الكارد */
+        height: auto; /* اترك ارتفاع الكارد يتكيف مع المحتوى */
+        margin: 20px 0; /* زيادة المسافة بين الكروت */
+        padding: 20px; /* تقليل التباعد الداخلي */
+    }
+
+    /* تنسيق النص والزر */
+    .your-custom-card h3 {
+        margin-top: 10px; /* تقليل المسافة بين العنوان والصورة */
+    }
+
+    .your-custom-card p {
+        color: black ;
+    font-size: 16px; /* تعديل حجم النص حسب الحاجة */
+    margin-top: 20px;
+    margin-bottom: 20px; /* تمديد المسافة بين النص والزر */ */
+    }
+
+    .your-custom-card .animate-button {
+        margin-top: 10px; /* تقليل المسافة بين الزر والنص */
+    }
+}
+.moon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top :15px;
+}
+
+.image {
+  width: 45%; /* تحديد نسبة عرض الصورة */
+  height :95%;
+  margin-top: 5px;
+}
+h3{
+  color :#0071bc ;
+}
+
+.text-container {
+  width: 50%; /* تحديد نسبة عرض النص */
+}
+
+.contact {
+  background-color: #ffff00 ; /* تغيير لون خلفية عنصر Contact */
+  padding: 5px; /* إضافة هامش داخلي لعنصر Contact */
+  color: #0071bc ; /* تغيير لون النص داخل عنصر Contact إلى الأسود */
+}
+@media only screen and (max-width: 600px) {
+    .contact {
+      
+      text-align: center;
+    }
+    img{
+      align-self: center;
+    }
+    p{
+      text-align :center ;
+    }
+  }
+.card-form {
+  
+            display: inline-block;
+            width: 40%;
+           
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px #aaa;
+            background-color: #fff;
+            
+        }
+
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #ffff00 ;
+            color: #0071bc ;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+/* تنسيق الفورم في شاشات الجوال */
+@media (max-width: 768px) {
+    .card-form {
+        width: 90%; /* تعديل حسب الحاجة */
+        margin: 10px;
+        display :block ;
+    }
+}
+.circle-container {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* تحديد موقع الزر في الزاوية السفلى اليمنى */
+  animation: moveCircle 2s infinite alternate;
+  /* حركة تكبير وتصغير تلقائية */
+  transition: bottom 1s;
+  /* تأثير الانتقال */
+  z-index: 9999;
+  /* تعيين قيمة z-index بحيث يكون الزر دائمًا في الطبقة الأولى */
+}
+
+.circle-button {
+  margin-bottom :500% ;
+  background-color: #ffff00 ;
+  color: black;
+  border: none;
   border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 1s infinite alternate;
+  /* حركة تكبير وتصغير تلقائية */
+}
+
+@keyframes moveCircle {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+/* يجعل حواف المستطيل دائرية */
+.toolbar {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* توسيط الأيقونات عموديًا */
+  background-color: #ffff00 ;
+  backdrop-filter: blur(5px);
   padding: 10px;
-  background: linear-gradient(to bottom right, rgba(192, 57, 232, 0.8), rgba(95, 0, 255, 0.8));
- 
-      backdrop-filter: blur(10px) 
-  transition: background-color 0.3s ease-in-out;
+  border-radius: 30px; /* تعديل حجم الحواف الدائرية */
+  z-index :9999;
+}
+a {
+  color: black; /* لون الأيقونة الأبيض */
+  
+
 }
 
-.transparent-bar a:hover {
-  background: rgba(255, 0, 128, 1); /* لون pink غامق دون شفافية عند التحويش */
+a:hover {
+  color: #0071bc ; /* لون الأيقونة عند التحويم عليها */
 }
-    .header {
-      background: linear-gradient(to bottom right, rgba(192, 57, 232, 0.8), rgba(95, 0, 255, 0.8));
 
-      backdrop-filter: blur(10px) 
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-bottom: 12px;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 80px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-      backdrop-filter: blur(10px); /* خلفية زجاجية */
-    }
 
-    /* شعار الموقع */
-    .logo {
-      margin-right: 10px;
-      width: 40px;
-      height: 50px;
-    }
+.fixed-link {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
 
-    /* اسم الموقع */
-    .site-name {
-      font-weight: bold;
-      font-style: italic;
-      font-size: 42px;
-      color: white;
-      text-shadow: 2px 2px 4px black;
-    }
-        /* زر السلة */
+.fixed-link a {
+  display: block;
+  background-color: black;
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #0071bc ;
+}
+
+.fixed-link a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 
 </style>
 </head> 
 
-<header>
-<div class="header">
 
-    <img src="https://www.vhv.rs/dpng/f/158-1584410_makeup-vector-png.png" alt="شعار الموقع" class="logo">
-    <h1 class="site-name">طلباتي</h1>
-  </div>
-</header>
  <body>
-
+<div class="navbar">
   
-
-  <div id="slider"> 
-   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"> 
-    <ol class="carousel-indicators"> 
-     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> 
-     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> 
-     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> 
-    </ol> 
-    <div class="carousel-inner"> 
-     <div class="carousel-item active"> 
-      <img src="https://khamsat.hsoubcdn.com/images/services/2080332/4c91b7fc20126dc96a23e247d7a60562.jpg" class="d-block w-100" alt="Slider 1"> 
-      <div class="carousel-caption d-none d-md-block"> 
-       <h5>أفضل الهواتف الذكية</h5> 
-       <p>تسوق الآن للحصول على أحدث التقنيات في الهواتف الذكية</p> 
-      </div> 
-     </div> 
-     <div class="carousel-item"> 
-      <img src="https://post.healthline.com/wp-content/uploads/2019/05/Perfume_Bottles-1200x628-Facebook.jpg" class="d-block w-100" alt="Slider 2"> 
-      <div class="carousel-caption d-none d-md-block"> 
-       <h5>خصومات هائلة</h5> 
-       <p>تسوق الآن واحصل على خصومات تصل إلى 50٪ على المنتجات المختارة</p> 
-      </div> 
-     </div> 
-     <div class="carousel-item"> 
-      <img src="https://khamsat.hsoubcdn.com/images/services/784752/10c467469eb517c5268efd7ddd156345.jpg" class="d-block w-100" alt="Slider 3"> 
-      <div class="carousel-caption d-none d-md-block"> 
-       <h5>تجربة التسوق الفريدة</h5> 
-       <p>تسوق الآن للحصول على تجربة تسوق فريدة وممتعة مع متجر اورنج</p> 
-      </div> 
-     </div> 
-    </div> <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> 
-   </div> 
-   
-   
-  <div class="container" id="draggable-container">
-    <div class="section">
-      <a href="https://example.com/link-1">
-        <img src="https://icon-icons.com/downloadimage.php?id=186790&root=2967/PNG/256/&file=dressing_gown_bathrobe_robe_icon_186790.png" alt="Section 1">
-        <p>قسم  ملابس نسائية</p>
-      </a>
-    </div>
-    <div class="section">
-      <a href="https://example.com/link-2">
-        <img src="https://icon-icons.com/downloadimage.php?id=186774&root=2967/PNG/128/&file=hair_dryer_beauty_icon_186774.png" alt="Section 2">
-        <p>قسم أدوات التجميل</p>
-      </a>
-    </div>
-    <div class="section">
-      <a href="https://example.com/link-3">
-        <img src="https://icon-icons.com/downloadimage.php?id=186769&root=2967/PNG/128/&file=parfume_perfume_fragance_scent_icon_186768.png" alt="Section 3">
-        <p>قسم العطور</p>
-      </a>
-    </div>
-    <div class="section">
-      <a href="https://example.com/link-4">
-        <img src="https://icon-icons.com/downloadimage.php?id=16087&root=94/PNG/96/&file=makeup_16817.png" alt="Section 4">
-        <p>قسم الميكاب</p>
-      </a>
-    </div>
-    <div class="section">
-      <a href="https://example.com/link-5">
-        <img src="https://icon-icons.com/downloadimage.php?id=115874&root=1832/PNG/96/&file=iconfinderfoodandrestaurantorganicveganhealthyfooddietvegetarianbananafoodapplefruit4394827-115907_115874.png" alt="Section 5">
-        <p>قسم التغذية مواد صحية</p>
-      </a>
-    </div>
-  </div>
-   
-   
-   
-
-   
-   
-   
-<div class="products-container">
-  <div class="product-card">
-    <img src="https://www.vhv.rs/dpng/f/39-397131_champions-league-png.png" alt="Product Image">
-    <p>Product 1</p>
-    <h7>عطر1</h7>
-    <br>
-    <h8>بسعر 15 الف جنيه</h8>
-    <div class="rating">
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star-half-o"></i>
-    </div>
-    <button class="add-to-cart" onclick="addToCart('Product 11', 15000)">Add to Cart</button>
-  </div>
-  <div class="product-card">
-    <img src="https://www.vhv.rs/dpng/f/228-2288764_tommy-hilfiger-png.png" alt="Product Image">
-    <p>Product 2</p>
-    <h7>عطر2</h7>
-    <br>
-    <h8>بسعر 15 الف جنيه</h8>
-    <div class="rating">
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star-half-o"></i>
-    </div>
-    <button class="add-to-cart" onclick="addToCart('Product 2', 15000)">Add to Cart</button>
-  </div>
-  <!-- إضافة المزيد من المنتجات هنا -->
-  <div class="product-card">
-    <img src="https://www.vhv.rs/dpng/f/116-1165731_perfumes-png.png" alt="Product Image">
-    <p>Product 3</p>
-    <h7>عطر 3</h7>
-    <br>
-    <h8>بسعر 15 الف جنيه</h8>
-    <div class="rating">
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star-half-o"></i>
-    </div>
-    <button class="add-to-cart" onclick="addToCart('Product 8', 15000)">Add to Cart</button>
-  </div>
-    <div class="product-card">
-    <img src="https://www.vhv.rs/dpng/f/160-1605380_male-angel-png.png" alt="Product Image">
-    <p>Product 4</p>
-    <h7>عطر 4</h7>
-    <br>
-    <h8>بسعر 15 الف جنيه</h8>
-    <div class="rating">
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star-half-o"></i>
-    </div>
-    <button class="add-to-cart" onclick="addToCart('Product 11', 15000)">Add to Cart</button>
-  </div>
-  <div class="product-card">
-    <img src="https://www.vhv.rs/dpng/f/392-3922625_perfumes-importados-png.png" alt="Product Image">
-    <p>Product 5</p>
-    <h7>عطر 5</h7>
-    <br>
-    <h8>بسعر 15 الف جنيه</h8>
-    <div class="rating">
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star-half-o"></i>
-    </div>
-    <button class="add-to-cart" onclick="addToCart('Product 2', 15000)">Add to Cart</button>
-  </div>
-  <!-- إضافة المزيد من المنتجات هنا -->
-  <div class="product-card">
-    <img src="https://www.vhv.rs/dpng/f/116-1166636_perfumes-png.png" alt="Product Image">
-    <p>Product 6</p>
-    <h7>عطر 6</h7>
-    <br>
-    <h8>بسعر 15 الف جنيه</h8>
-    <div class="rating">
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star-half-o"></i>
-    </div>
-    <button class="add-to-cart" onclick="addToCart('Product 8', 15000)">Add to Cart</button>
-  </div>
-    <div class="product-card">
-      <img src="https://www.vhv.rs/dpng/f/110-1106031_perfume-bottle-png.png" alt="Product Image">
-      <p>Product 7</p>
-      <h7>عطر 7</h7>
-      <br>
-      <h8>بسعر 15 الف جنيه</h8>
-      <div class="rating">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star-half-o"></i>
-      </div>
-      <button class="add-to-cart" onclick="addToCart('Product 11', 15000)">Add to Cart</button>
-    </div>
-    <div class="product-card">
-      <img src="https://www.vhv.rs/dpng/f/110-1107257_perfume-bottle-png.png" alt="Product Image">
-      <p>Product 8</p>
-      <h7>عطر</h7>
-      <br>
-      <h8>بسعر 15 الف جنيه</h8>
-      <div class="rating">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star-half-o"></i>
-      </div>
-      <button class="add-to-cart" onclick="addToCart('Product 2', 15000)">Add to Cart</button>
-    </div>
-    </div>
-</div>
-<br>
-<div class="products-container">
-  <div class="product-card">
-    <img src="https://www.vhv.rs/dpng/f/251-2518628_fenty-beauty-png.png" alt="Product Image">
-    <p>Product 9</p>
-    <h7>منتج 9 </h7>
-    <br>
-    <h8>بسعر 15 الف جنيه</h8>
-    <div class="rating">
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star-half-o"></i>
-    </div>
-    <button class="add-to-cart" onclick="addToCart('Product 11', 15000)">Add to Cart</button>
-  </div>
-  <div class="product-card">
-    <img src="https://www.vhv.rs/dpng/f/436-4365770_soap-png.png" alt="Product Image">
-    <p>Product 10</p>
-    <h7>منتج 10</h7>
-    <br>
-    <h8>بسعر 15 الف جنيه</h8>
-    <div class="rating">
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star-half-o"></i>
-    </div>
-    <button class="add-to-cart" onclick="addToCart('Product 2', 15000)">Add to Cart</button>
-  </div>
-  <!-- إضافة المزيد من المنتجات هنا -->
-  <div class="product-card">
-    <img src="https://www.vhv.rs/dpng/f/586-5865262_coconut-oil-png.png" alt="Product Image">
-    <p>Product 11</p>
-    <h7>منتج 11</h7>
-    <br>
-    <h8>بسعر 15 الف جنيه</h8>
-    <div class="rating">
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star-half-o"></i>
-    </div>
-    <button class="add-to-cart" onclick="addToCart('Product 8', 15000)">Add to Cart</button>
-  </div>
-    <div class="product-card">
-    <img src="https://www.vhv.rs/dpng/f/251-2517878_fenty-beauty-png.png" alt="Product Image">
-    <p>Product 12</p>
-    <h7>منتج 12</h7>
-    <br>
-    <h8>بسعر 15 الف جنيه</h8>
-    <div class="rating">
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star-half-o"></i>
-    </div>
-    <button class="add-to-cart" onclick="addToCart('Product 11', 15000)">Add to Cart</button>
-  </div>
-  <div class="product-card">
-    <img src="https://www.vhv.rs/dpng/f/554-5545199_flat-iron-png.png" alt="Product Image">
-    <p>Product 5</p>
-    <h7>شنطة ذكية</h7>
-    <br>
-    <h8>بسعر 15 الف جنيه</h8>
-    <div class="rating">
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star-half-o"></i>
-    </div>
-    <button class="add-to-cart" onclick="addToCart('Product 2', 15000)">Add to Cart</button>
-  </div>
-  <!-- إضافة المزيد من المنتجات هنا -->
-  <div class="product-card">
-    <img src="https://www.vhv.rs/dpng/f/269-2693770_frosted-glass-png.png" alt="Product Image">
-    <p>Product 6</p>
-    <h7>شنطة ذكية</h7>
-    <br>
-    <h8>بسعر 15 الف جنيه</h8>
-    <div class="rating">
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star-half-o"></i>
-    </div>
-    <button class="add-to-cart" onclick="addToCart('Product 8', 15000)">Add to Cart</button>
-  </div>
-    <div class="product-card">
-      <img src="https://www.vhv.rs/dpng/f/380-3806717_beauty-products-png.png" alt="Product Image">
-      <p>Product 7</p>
-      <h7>شنطة ذكية</h7>
-      <br>
-      <h8>بسعر 15 الف جنيه</h8>
-      <div class="rating">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star-half-o"></i>
-      </div>
-      <button class="add-to-cart" onclick="addToCart('Product 11', 15000)">Add to Cart</button>
-    </div>
-    <div class="product-card">
-      <img src="https://www.vhv.rs/dpng/f/551-5512000_cejas-png.png" alt="Product Image">
-      <p>Product 8</p>
-      <h7>شنطة ذكية</h7>
-      <br>
-      <h8>بسعر 15 الف جنيه</h8>
-      <div class="rating">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star-half-o"></i>
-      </div>
-      <button class="add-to-cart" onclick="addToCart('Product 2', 15000)">Add to Cart</button>
-    </div>
-    </div>
-</div>
-  <div class="accordion">
-    <div class="accordion-item">
-      <input type="checkbox" id="accordion-1" />
-      <label class="accordion-header" for="accordion-1">Section 1</label>
-      <div class="accordion-content">
-        <p>Content for Section 1 goes here.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <input type="checkbox" id="accordion-2" />
-      <label class="accordion-header" for="accordion-2">Section 2</label>
-      <div class="accordion-content">
-        <p>Content for Section 2 goes here.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <input type="checkbox" id="accordion-3" />
-      <label class="accordion-header" for="accordion-3">Section 3</label>
-      <div class="accordion-content">
-        <p>Content for Section 3 goes here.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <input type="checkbox" id="accordion-4" />
-      <label class="accordion-header" for="accordion-4">Section 4</label>
-      <div class="accordion-content">
-        <p>Content for Section 4 goes here.</p>
-      </div>
-    </div>
-  </div>
-
-
-   <h2 style="text-align: center"> Contact Form </h2>
-   <div class="form-container">
-
-     <form action="#">
-
-       <div class="input-cnt">
-         <i class="material-icons">person</i>
-         <input type="text" placeholder="Name" name="name" />
-       </div>
-
-       <div class="input-cnt">
-         <i class="material-icons">email</i>
-         <input type="text" placeholder="Email" name="email" />
-       </div>
-
-       <div class="input-cnt">
-         <i class="material-icons textarea-icon">message</i>
-         <textarea placeholder="Your message here..." name="message"></textarea>
-       </div>
-
-       <div class="input-cnt">
-         <input type="submit" />
-       </div>
-
-     </form>
-
-   </div>
-<div class="transparent-bar">
-  <a href="#home"><i class="fas fa-home"></i></a>
-  <a href="/Indexapp.html">
-    <i class="fas fa-shopping-cart"></i>
-    <span id="cartItemCount"></span> <!-- عرض عدد المنتجات المضافة هنا -->
-  </a>
-  <a href="#account"><i class="fas fa-user"></i></a>
-  <a href="javascript:history.go(-1)"><i class="fas fa-arrow-circle-left fa-flip-horizontal"></i></a>
+  
+  <p>أنجز مشاريعك بسهولة وأمان عبر أكبر منصة عمل حر بالعالم العربي</p>
+  
+  <button>اقرأ المزيد</button>
 </div>
 
-    <script>
-        new Draggable(document.querySelectorAll('.section'), {
-          draggable: '.section',
-          limit: "body",
-          snap: { x: 150, range: Infinity }
-        });
+
+    <div class="toolbar">
+      <!-- أيقونة القائمة -->
+      <a href="#" class="icon menu-icon"><i class="fas fa-bars"></i></a>
+  
+      <!-- أيقونة الرسائل -->
+      <a href="#" class="icon messages-icon"><i class="fas fa-envelope"></i></a>
+  
+      <!-- أيقونة المعرض -->
+      <a href="#" class="icon gallery-icon"><i class="fas fa-images"></i></a>
+  
+      <!-- أيقونة التحميل -->
+      <a href="#" class="icon download-icon"><i class="fas fa-download"></i></a>
+    </div>
+    </div>
+
+<div class="circle-container">
+  <button class="circle-button" id="animate-button">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+</div>
+<h1>خدماتنا</h1>
+<img src="/أيقونة خدماتنا.png" alt="وصف الصورة"
+style="display: block; margin: 0 auto; width: 150px; height: 200px;">
+<div class="cards-container">
+        <div class="card">
+              <h>تصميم تطبيقات</h>
+            <img src="/أيقونة تصميم تطبيقات.png" alt="Card 1" class="card-img">
+            <a href="رابط الصفحة الهدف">
+                <button class="order-button">اطلب الآن</button>
+            </a>
         
-        //السلة
+        </div>
+                                <div class="card">
+                                  <h>تصميم مواقع</h>
+                                  <img src="/أيقونة تصميم المواقع.png" alt="Card 2" class="card-img">
+                                  <a href="رابط الصفحة الهدف">
+                                    <button class="order-button">اطلب الآن</button>
+                                  </a>
+                                </div>
+                <div class="card">
+                         <h>تصميم جرافيك</h>
+                  <img src="/تصميم جرافيك.png" alt="Card 3" class="card-img">
+                  <a href="رابط الصفحة الهدف">
+                    <button class="order-button">اطلب الآن</button>
+                  </a>
+                </div>
+                        <div class="card">
+                          <h> موشن فيديو  </h>
+                          <img src="/أيقونة الموشن فيديو.png" alt="Card 4" class="card-img">
+                          <a href="رابط الصفحة الهدف">
+                            <button class="order-button">اطلب الآن</button>
+                          </a>
+                        </div>
+                <div class="card">
+                  <h>تصميم داخلي</h>
+            <img src="/أيقونة التصميم الداخلي.png" alt="Card 5" class="card-img">
+            <a href="رابط الصفحة الهدف">
+                <button class="order-button">اطلب الآن</button>
+            </a>
+        </div>
+                <div class="card">
+                  <h>إدارة صفحات</h>
+                  <img src="/أيقونة إدارة الصفحات.png" alt="Card 6" class="card-img">
+                  <a href="رابط الصفحة الهدف">
+                    <button class="order-button">اطلب الآن</button>
+                  </a>
+                </div>
+                        
+                        </div>
         
 
 
 
+<div class="col-lg-10 offset-lg-1 pt-5 pb-5 bg- text-dark">
+  <div id="client-testimonial-carousel" class="carousel slide" data-ride="carousel" style="height:200px;">
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active text-center p-4">
+        <blockquote class="blockquote text-center">
+          <p class="mb-0"><i class="fa fa-quote-left"></i>
+     SudanPalette is an online gallery site that showcases paintings and sculptures by Sudanese artists.  The website aims to promote talented Sudanese in the field of art and provide a platform to display their work and communicate with the general public and those interested in visual arts.
+          </p>
+          <footer class="blockquote-footer">Albert Einstein <cite title="Source Title">genius</cite></footer>
+          <!-- Client review stars -->
+          <!-- "fas fa-star" for a full star, "far fa-star" for an empty star, "far fa-star-half-alt" for a half star. -->
+          <p class="client-review-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+          </p>
+        </blockquote>
+      </div>
+      <div class="carousel-item text-center p-4">
+        <blockquote class="blockquote text-center">
+          <p class="mb-0"><i class="fa fa-quote-left"></i> Sudanese artists can display their artwork in various styles and techniques, including painting, photography, and sculpture.  The works are categorized into different categories according to style, technique, and subject matter.  This makes it easier for visitors to easily browse and discover the works of their favorite artists..
+          </p>
+          <footer class="blockquote-footer">Albert Einstein <cite title="Source Title">genius</cite></footer>
+          <!-- Client review stars -->
+          <!-- "fas fa-star" for a full star, "far fa-star" for an empty star, "far fa-star-half-alt" for a half star. -->
+          <p class="client-review-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </p>
+        </blockquote>
+      </div>
+      <div class="carousel-item text-center p-4">
+        <blockquote class="blockquote text-center">
+          <p class="mb-0"><i class="fa fa-quote-left"></i> The site also provides detailed information about each artist, including their bio and career profile.  Visitors can also purchase paintings and sculptures through the site, either as individual pieces or in the artists' virtual exhibitions..
+          </p>
+          <footer class="blockquote-footer">Albert Einstein <cite title="Source Title">genius</cite></footer>
+          <!-- Client review stars -->
+          <!-- "fas fa-star" for a full star, "far fa-star" for an empty star, "far fa-star-half-alt" for a half star. -->
+          <p class="client-review-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </p>
+        </blockquote>
+      </div>
+    </div>
+    <ol class="carousel-indicators">
+      <li data-target="#client-testimonial-carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#client-testimonial-carousel" data-slide-to="1"></li>
+      <li data-target="#client-testimonial-carousel" data-slide-to="2"></li>
+    </ol>
+  </div>
+</div>
+<h2>دورات تدريبية</h2>
+<img src="/reading_books_icon_176864.png" alt="وصف الصورة"
+style="display: block; margin-left: 60%; width: 150px; height: 200px;">
+
+<div class="your-custom-card-container">
+        <div class="your-custom-card">
+          <h>دورات تعلم أساسيات الحاسوب</h>
+            <img src="/slider-2.jpg" alt="Card Image">
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod ex ut nulla condimentum.</p>
+            <a href="your-link.html" class="animate-button">سجل الآن</a>
+        </div>
+        <div class="your-custom-card">
+          <h>دورة تعليم الفوتشوب</h>
+            <img src="/slider-1.jpg" alt="Card Image">
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod ex ut nulla condimentum.</p>
+            <a href="your-link.html" class="animate-button">سجل الآن</a>
+        </div>
+    </div>
+<div class="moon">
+  <img src="/صورة مووون.png" alt="صورة" width="300" height="500" class="image">
+  <div class="text-container">
+    <h3>Order your paintings</h3>
+    <p>Ordering handmade painting, sketch drawing, watercolor painting, oil pastel drawing - any painting you order.</p>
+    <p class="contact">Contact us:</p>
+    <p class="contact">+249902707192</p>
+        <p class="contact">unique2tow@gmail.com</p>
+  </div>
+</div>
+
+  </center>
+<center>
+<div class="card-form">
+        <h3>تسجيل الدخول</h3>
+        <form id="loginForm">
+            <label for="username">اسم المستخدم:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">كلمة المرور:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <button type="submit" id="loginButton">تسجيل الدخول</button>
+        </form>
+    </div>
+
+    <div class="card-form">
+        <h3>إنشاء حساب</h3>
+        <form id="signupForm">
+            <label for="newUsername">اسم المستخدم:</label>
+            <input type="text" id="newUsername" name="newUsername"><br><br>
+            <label for="newPassword">كلمة المرور:</label>
+            <input type="password" id="newPassword" name="newPassword"><br><br>
+            <button type="submit" id="signupButton">إنشاء حساب</button>
+        </form>
+    </div>
+</center>
+
+
+  </body>
+
+
+
+
+
+<script src="main.js"></script>
+
+     <script>
+     //
+// إزالة الهوامش وضبط العرض
+      function adjustPageLayout() {
+        document.body.style.margin = "0";
+        document.body.style.padding = "0";
+        document.documentElement.style.width = "100%";
+        document.body.style.width = "100%";
+        document.documentElement.style.overflowX = "hidden";
+      }
+      
+      // استدعاء الدالة عند تحميل الصفحة
+      window.addEventListener("load", function() {
+        adjustPageLayout();
+      });
+        
+        //overly
+        document.addEventListener('DOMContentLoaded', function() {
+    const imageBoxes = document.querySelectorAll('.image-box');
+  
+    imageBoxes.forEach(box => {
+      const img = box.querySelector('img');
+      const overlay = box.querySelector('.overlay');
+  
+      const text = document.createElement('p');
+      text.className = 'image-text';
+      text.textContent = img.getAttribute('alt');
+      text.style.opacity = '1'; // تعيين الشفافية إلى 1 لجعل النص دائمًا ظاهرًا
+  
+      overlay.appendChild(text);
+  
+      box.addEventListener('mouseenter', () => {
+        overlay.style.opacity = '1';
+      });
+  
+      box.addEventListener('mouseleave', () => {
+        overlay.style.opacity = '0';
+      });
+    });
+  });
+  
+// التفاعل مع الفورم لتسجيل الدخول
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // منع إرسال النموذج
+
+  // قم بجلب قيم المدخلات
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  // هنا يمكنك إجراء عمليات التحقق والمعالجة الخاصة بتسجيل الدخول
+  // على سبيل المثال، يمكنك إجراء طلب إلى خادم للتحقق من البيانات
+
+  // إظهار رسالة نجاح أو فشل
+  alert(`مرحبًا ${username}! تم تسجيل الدخول بنجاح.`);
+});
+
+// التفاعل مع الفورم لإنشاء حساب
+document.getElementById("signupForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // منع إرسال النموذج
+
+  // قم بجلب قيم المدخلات
+  const newUsername = document.getElementById("newUsername").value;
+  const newPassword = document.getElementById("newPassword").value;
+
+  // هنا يمكنك إجراء عمليات التحقق والمعالجة الخاصة بإنشاء الحساب
+  // على سبيل المثال، يمكنك إرسال بيانات الحساب إلى خادم لحفظها
+
+  // إظهار رسالة نجاح أو فشل
+  alert(`تم إنشاء حساب ${newUsername} بنجاح.`);
+});
+
+//زر انتقال إلى اعلي
+// احتفظ بالارتفاع الأصلي للزر
+// انتظر حتى تتم تحميل الصفحة بالكامل
+document.addEventListener("DOMContentLoaded", function() {
+  // استهداف الزر
+  var animateButton = document.getElementById("animate-button");
+
+  // إضافة حدث النقر (الضغط) إلى الزر
+  animateButton.addEventListener("click", function() {
+    // قم بالتمرير إلى الجزء العلوي من الصفحة بسرعة
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth" // لتوفير تأثير التمرير الناعم
+    });
+  });
+});
 </script>
 </body>
-<footer>
-    <div class="footer-top">
-      <div class="footer-column">
-        <h3>روابط سريعة</h3>
-        <ul>
-          <li><i class="fas fa-home" style="font-size: 24px;"></i>
-           الرئيسية </li>
-          <li><i class="fas fa-shopping-bag" style="font-size: 24px;"></i>
-         المنتجات</li>
-          <li><i class="fas fa-tags" style="font-size: 24px;"></i>
-          العروض</li>
-          <li><i class="fas fa-user" style="font-size: 24px;"></i>
-          حسابي</li>
-        </ul>
+  <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <img src="/ صورة الشعار.png" alt="Website Logo">
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <form class="contact-form">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </div>
-      <div class="footer-column">
-        <h3>خدمة العملاء</h3>
-        <ul>
-          <li><i class="fas fa-envelope"></i>
-تواصل معنا</li>
-        <li><i class="fas fa-undo"></i>
-سياسة لاسترجاع</li>
-        <li><i class="fas fa-question-circle"></i>
-        الأسئلة الشائعة</li>
-        <li><a href="#">شروط الاستخدام</a></li>
-      </ul>
-    </div>
-    <div class="footer-column">
-      <h3>تابعنا</h3>
-      <ul>
-        <li><i class="fab fa-facebook"></i>
-فيسبوك</li>
-        <li><i class="fab fa-twitter">تويتر</i>
-</li>
-        <li><i class="fab fa-instagram">انستجرام</i>
-</li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>جميع الحقوق محفوظة &copy; 2023</p>
-  </div>
-</footer>
+      <div class="footer-text">
+        <p>© 2023 Your Website. All rights reserved.</p>
+      </div>
+      <div class="footer-payment">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+      </div>
+    </footer>
+    
+
+
 </html>
