@@ -839,13 +839,41 @@ h6.animated-text {
     }
 }
 
+#loading-screen {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #0071bc ;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 99999;
+}
+
+.loader {
+border: 16px solid #f3f3f3;
+border-top: 16px solid #3498db;
+border-radius: 50%;
+width: 120px;
+height: 120px;
+animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
 </style>
 </head> 
 
 
  <body>
 
-
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
 <header>
     <div class="header-content">
           <img src="https://up6.cc/2023/09/169562983897242.jpg" alt="صورة" width="100%" height="400px">
@@ -1252,6 +1280,11 @@ accordionItems.forEach((item) => {
     // إضافة النشاط إلى العنصر المناسب
     item.classList.toggle('active');
   });
+});
+//loading
+window.addEventListener("load", function() {
+  const loader = document.getElementById("loading-screen");
+  loader.classList.add("hide");
 });
 </script>
 </body>
