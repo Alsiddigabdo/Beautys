@@ -118,11 +118,11 @@ transform: translateX(0);
 
 
 .footer {
-  background-color: #ffdd00 ;
-  color: black;
+  background-color: #0071bc ;
+  color: #fff;
   padding: 20px;
   text-align: center;
-  margin-top :20px;
+  margin-top :0px;
 }
 
 .footer-content {
@@ -173,7 +173,7 @@ transform: translateX(0);
 
 .social-icons a i {
   font-size: 24px;
-  color: #000000;
+  color: #fff;
 }
 
 .contact-form input[type="email"] {
@@ -183,8 +183,8 @@ transform: translateX(0);
 }
 
 .contact-form button {
-  background-color:  #0071bc ;
-  color: #fff ;
+  background-color:  #ffdd55 ;
+  color: #0071bc ;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -211,6 +211,7 @@ transform: translateX(0);
 .footer-text {
   margin-top: 20px;
   animation: fade-in 1s ease-in-out;
+  color:;
 }
 /* تنسيق الفوتر لشاشات الجوال */
 @media screen and (max-width: 768px) {
@@ -574,20 +575,20 @@ h3{
   display: flex;
   justify-content: space-around;
   align-items: center; /* توسيط الأيقونات عموديًا */
-  background-color: #0071bc ;
+  background-color: #ffdd00 ;
   backdrop-filter: blur(5px);
   padding: 40px;
   border-radius: 30px; /* تعديل حجم الحواف الدائرية */
   z-index :9999;
 }
 a {
-  color: #fff; /* لون الأيقونة الأبيض */
+  color: black ; /* لون الأيقونة الأبيض */
   
 
 }
 
 a:hover {
-  color: #ffff00 ; /* لون الأيقونة عند التحويم عليها */
+  color: #fff; /* لون الأيقونة عند التحويم عليها */
 }
 
 
@@ -622,6 +623,7 @@ a:hover {
         display: block; /* جعل النص ظهر كبلوك (سطر جديد) تحت الأيقونة */
         font-size: 14px; /* حجم النص تحت الأيقونة */
         text-align: center; /* مركز النص */
+        color:black ;
     }
 }
 
@@ -639,6 +641,7 @@ a:hover {
             font-size :20px;
             direction: rtl;
             text-align: right ;
+            direction: rtl;
         }
         h5 {
           font-family: 'Messiri', sans-serif;
@@ -653,6 +656,7 @@ a:hover {
             font-family: 'Messiri', sans-serif;
             color: black;
             text-align: right ;
+            direction: rtl;
         }
     
 .img-container {
@@ -689,7 +693,62 @@ a:hover {
             }
         }
 
+/* تخصيص زر الأكورديون */
+.accordion-btn {
+  background-color: #0071bc ;
+  color: #fff ;
+  padding: 10px;
+  width: 100%;
+  height :80px ;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 0px;
+  
+  
+}
 
+/* توجيه نص الزر إلى اليمين */
+.accordion-btn {
+  direction: rtl;
+  text-align :right ;
+}
+/* تخصيص محتوى الأكورديون - أخفاؤه افتراضياً */
+.accordion-content {
+  display: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  background-color: white;
+  
+}
+
+/* تخصيص العناصر الأكورديون */
+.accordion-item:first-child .accordion-btn {
+  border-radius: 5px 5px 0 0;
+  
+}
+
+/* تخصيص عنصر الأكورديون الذي تم فتحه */
+.accordion-item.active .accordion-content {
+  display: block;
+  
+}
+/* تخصيص العناصر الأكورديون باستثناء الأخير */
+.accordion-item:not(:last-child) {
+  border-bottom: 1px solid white; /* تحديد خط الفاصل باللون الأبيض */
+  margin-bottom: 2px; /* تخصيص المسافة بين الفقرات */
+}
+/* تخصيص الأيقونة داخل زر الأكورديون */
+.accordion-btn i {
+  font-size: 24px; /* حجم الأيقونة */
+  color: #fff; /* لون الأيقونة */
+  margin-left: 5px; /* هامش إلى اليمين للأيقونة */
+  float: left ; /* تحديد موقع الأيقونة على اليمين */
+}
 </style>
 </head> 
 
@@ -882,6 +941,46 @@ style="display: block; margin: 0 auto; width: 150px; height: 200px;">
     </ol>
   </div>
 </div>
+<h1>الآسئلة الشائعة</h1>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-btn">ما هو unique ؟
+      <i class="fas fa-chevron-down"></i> </button>
+      <div class="accordion-content">
+        <p>HTML (Hypertext Markup Language) is the standard markup language for creating web pages.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-btn">
+         كيف أستفيد منه؟
+         <i class="fas fa-chevron-down"></i> </button>
+      <div class="accordion-content">
+        <p>CSS (Cascading Style Sheets) is a style sheet language used for describing the look and formatting of a document written in HTML.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-btn">ما هي المجالات التي يمكنني أن أوظف فيها مستقلين عن بعد؟
+      <i class="fas fa-chevron-down"></i> </button>
+      <div class="accordion-content">
+        <p>JavaScript is a high-level, interpreted programming language used to make web pages interactive.</p>
+      </div>
+    </div>
+        <div class="accordion-item">
+          <button class="accordion-btn">كيف يضمن موقع unique حقوقي؟
+          <i class="fas fa-chevron-down"></i> </button>
+          <div class="accordion-content">
+            <p>JavaScript is a high-level, interpreted programming language used to make web pages interactive.</p>
+          </div>
+        </div>
+            <div class="accordion-item">
+              <button class="accordion-btn">لماذا التوظيف عن بعد عبر مستقل هو الخيار الأفضل لي؟
+              <i class="fas fa-chevron-down"></i> </button>
+              <div class="accordion-content">
+                <p>JavaScript is a high-level, interpreted programming language used to make web pages interactive.</p>
+              </div>
+            </div>
 <h2>دورات تدريبية</h2>
 <img src="/reading_books_icon_176864.png" alt="وصف الصورة"
 style="display: block; margin-left: 60%; width: 150px; height: 200px;">
@@ -914,6 +1013,7 @@ style="display: block; margin-left: 60%; width: 150px; height: 200px;">
 </div>
 
   </center>
+
 <center>
 <div class="card-form">
         <h3>تسجيل الدخول</h3>
@@ -937,6 +1037,7 @@ style="display: block; margin-left: 60%; width: 150px; height: 200px;">
         </form>
     </div>
 </center>
+
 
 
   </body>
@@ -1032,6 +1133,22 @@ document.addEventListener("DOMContentLoaded", function() {
       top: 0,
       behavior: "smooth" // لتوفير تأثير التمرير الناعم
     });
+  });
+});
+// العثور على العناصر الأكورديون
+const accordionItems = document.querySelectorAll('.accordion-item');
+
+// إضافة حدث النقر إلى زر الأكورديون
+accordionItems.forEach((item) => {
+  const button = item.querySelector('.accordion-btn');
+  button.addEventListener('click', () => {
+    // إزالة النشاط من كل العناصر
+    accordionItems.forEach((otherItem) => {
+      otherItem.classList.remove('active');
+    });
+
+    // إضافة النشاط إلى العنصر المناسب
+    item.classList.toggle('active');
   });
 });
 </script>
