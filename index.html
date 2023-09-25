@@ -55,7 +55,7 @@ align-items: center;
 height: 300px;
 width :100%;
 overflow:hidden ;
-background-color :#ffdd55 ;
+background-color :#ffff00 ;
 
 }
 
@@ -183,7 +183,7 @@ transform: translateX(0);
 }
 
 .contact-form button {
-  background-color:  #ffdd55 ;
+  background-color:  #ffff00 ;
   color: black;
   border: none;
   padding: 10px 20px;
@@ -305,7 +305,7 @@ h2 {
 .order-button {
 
     color: black;
-    background-color: #ffdd55;
+    background-color: #ffff00;
     color: black;
     font-size :16px;
     font-style: bold;
@@ -380,7 +380,7 @@ h2 {
 /* استهداف زر "سجل الآن" */
 .your-custom-card .animate-button {
     display: inline-block;
-    background-color: #ffdd55;
+    background-color: #ffff00;
     color: black;
     
     font-style: bold;
@@ -454,7 +454,7 @@ h3{
 }
 
 .contact {
-  background-color: #ffdd55;
+  background-color: #ffff00;
   color: black;
   font-size :16px;
   font-style: bold;
@@ -503,7 +503,7 @@ h3{
         }
 
         button {
-            background-color: #ffdd55 ;
+            background-color: #ffff00 ;
             color: black ;
             font-size :16px;
             font-style: bold;
@@ -576,7 +576,7 @@ h3{
   display: flex;
   justify-content: space-around;
   align-items: center; /* توسيط الأيقونات عموديًا */
-  background-color: #ffdd00 ;
+  background-color: #ffff00 ;
   backdrop-filter: blur(5px);
   padding: 40px;
   border-radius: 30px; /* تعديل حجم الحواف الدائرية */
@@ -589,7 +589,7 @@ a {
 }
 
 a:hover {
-  color: #fff; /* لون الأيقونة عند التحويم عليها */
+  color: #0071bc ; /* لون الأيقونة عند التحويم عليها */
 }
 
 
@@ -753,10 +753,92 @@ h6{
 /* تخصيص الأيقونة داخل زر الأكورديون */
 .accordion-btn i {
   font-size: 24px; /* حجم الأيقونة */
-  color: #ffdd55 ; /* لون الأيقونة */
+  color: #ffff00 ; /* لون الأيقونة */
   margin-left: 5px; /* هامش إلى اليمين للأيقونة */
   float: left ; /* تحديد موقع الأيقونة على اليمين */
 }
+.header {
+    position: relative;
+    height: 500px;
+    background-image: url('your-image.jpg'); /* استبدل 'your-image.jpg' بمسار صورة الخلفية الخاصة بك */
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    overflow: hidden;
+}
+
+.header-content {
+    position: relative;
+    text-align: center;
+}
+
+h6.animated-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: infiniteSlide 5s infinite;
+    font-size: 26px;
+    color: black;
+}
+
+@keyframes infiniteSlide {
+    0%, 100% {
+        transform: translate(-50%, -50%);
+    }
+    25% {
+        transform: translate(-50%, -50%) translateY(-10px);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-20px);
+    }
+    75% {
+        transform: translate(-50%, -50%) translateY(-10px);
+    }
+}
+
+.read-more {
+    position: absolute;
+    bottom: 50px;
+    height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0071bc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-align :center ;
+}
+
+/* تحديد مسافة الزر بعد النص */
+.read-more a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.icon.fas.fa-globe {
+    position: absolute;
+    top:70px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 24px;
+    animation: infiniteSpin 5s linear infinite; /* أنميشن للحركة - دوران مستمر */
+}
+
+@keyframes infiniteSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg); /* دوران كامل حول نفسها */
+    }
+}
+
 </style>
 </head> 
 
@@ -764,7 +846,17 @@ h6{
  <body>
 
 
-
+<header>
+    <div class="header-content">
+          <img src="https://up6.cc/2023/09/169562983897242.jpg" alt="صورة" width="100%" height="400px">
+          <h6 class="animated-text">نص متحرك هنا</h6>
+          <div class="read-more">
+            <a href="#">اقرأ المزيد</a>
+            <i class="icon fas fa-globe"></i>
+          </div>
+        </div>
+        
+    </header>
   
 
   
