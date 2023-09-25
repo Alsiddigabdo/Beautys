@@ -473,57 +473,7 @@ h3{
       text-align :center ;
     }
   }
-.card-form {
-  
-            display: inline-block;
-            width: 40%;
-           
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            box-shadow: 2px 2px 5px #aaa;
-            background-color: #fff;
-            
-        }
 
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 5px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        button {
-            background-color: #0071bc ;
-            color: #ffff00 ;
-            font-size :16px;
-            font-style: bold;
-            border: none;
-            padding: 10px 10px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-/* تنسيق الفورم في شاشات الجوال */
-@media (max-width: 768px) {
-    .card-form {
-        width: 90%; /* تعديل حسب الحاجة */
-        margin: 10px;
-        display :block ;
-    }
-}
 .circle-container {
   display: block;
   position: fixed;
@@ -757,6 +707,9 @@ h6{
   margin-left: 5px; /* هامش إلى اليمين للأيقونة */
   float: left ; /* تحديد موقع الأيقونة على اليمين */
 }
+.accordion-btn:hover {
+  background-color: #f2f3f4;
+}
 .header {
     position: relative;
     height: 500px;
@@ -865,6 +818,7 @@ animation: spin 2s linear infinite;
 0% { transform: rotate(0deg); }
 100% { transform: rotate(360deg); }
 }
+
 </style>
 </head> 
 
@@ -877,7 +831,7 @@ animation: spin 2s linear infinite;
 <header>
     <div class="header-content">
           <img src="https://up6.cc/2023/09/169562983897242.jpg" alt="صورة" width="100%" height="400px">
-          <h6 class="animated-text">نص متحرك هنا</h6>
+          <h6 class="animated-text">  </h6>
           <div class="read-more">
             <a href="#">اقرأ المزيد</a>
             <i class="icon fas fa-globe"></i>
@@ -889,16 +843,17 @@ animation: spin 2s linear infinite;
 
   
 
-  <h1>هل لديك عمل تريد إنجازه</h1>
-  <h4><i class="icon fas fa-award"></i> أضف مشروع</h4>
-  <p>أضف تفاصيل المشروع الذي تحتاج إنجازه والمهارات المطلوبة واحصل على عروض المستقلين المتخصصين في دقائق.</p>
+  <h1>هل لديك عمل تريد إنجازه؟ </h1>
+  <h4><i class="icon fas fa-award"></i> أضافة  مشروع</h4>
+  <p>أضف مشروعك على منصة Unique!
+  قم بإضافة التفاصيل والمهارات المطلوبة، ثم احصل على عروض من الخبراء في دقائق.</p>
 
-  <h4><i class="icon fas fa-check-circle"></i> اختر المستقل المناسب</h4>
-  <p>قارن عروض المستقلين وتصفح ملفاتهم وتقيماتهم وأعمالهم، تفاوض معهم عبر الرسائل واختر الأفضل لتنفيذ مشروعك.</p>
+  <h4><i class="icon fas fa-check-circle"></i> اختر الخبير المناسب</h4>
+  <p>اختر الخبير المناسب لمشروعك. قارن بين العروض، استعرض الملفات الشخصية والتقييمات، وتواصل معهم للتفاوض.</p>
 
   <h4><i class="icon fas fa-tasks"></i>
     استلم المشروع</h4>
-  <p>سيعمل المستقل الذي اخترته على مشروعك ويتابع معك حتى حصولك على نتائج العمل المتفق عليه وتسليم المشروع.</p>
+  <p>احصل على مشروعك النهائي! سيعمل الخبير الذي تختاره بتفانٍ ودقة، وسيتابع معك خلال جميع مراحل العمل حتى تحصل على نتائج ممتازة."</p>
 <div class="toolbar">
     <!-- أيقونة القائمة -->
     <a href="#" class="icon menu-icon"><i class="fas fa-bars"></i><span>القائمة</span></a>
@@ -918,8 +873,8 @@ animation: spin 2s linear infinite;
       <i class="fas fa-chevron-up"></i>
     </button>
   </div>
-<h1>خدماتنا</h1>
-<img src="/أيقونة خدماتنا.png" alt="وصف الصورة"
+<h1>الخدمات</h1>
+<img src="https://icon-icons.com/downloadimage.php?id=176866&root=2774/PNG/512/&file=procrastinating_working_workspace_man_laptop_icon_176866.png" alt="وصف الصورة"
 style="display: block; margin: 0 auto; width: 150px; height: 200px;">
 <div class="cards-container">
         <div class="card">
@@ -972,37 +927,38 @@ style="display: block; margin: 0 auto; width: 150px; height: 200px;">
         <!-- الصورة الأولى -->
         <div class="image-box">
             <img src="https://icon-icons.com/downloadimage.php?id=150101&root=2488/PNG/512/&file=developing_ideas_icon_150101.png" alt="صورة 1">
-            <h5>نص الصورة 1</h5>
+            <h5>مع منصة Unique، ستجد كل ما تحتاجه لتلبية احتياجاتك ومطالبك في مجال التكنولوجيا والتصميم. انضم إلينا اليوم واستمتع بتجربة فريدة من نوعها في عالم الإبداع والابتكار.</h5>
         </div>
 
         <!-- الصورة الثانية -->
         <div class="image-box">
             <img src="https://icon-icons.com/downloadimage.php?id=150042&root=2485/PNG/512/&file=value_icon_150042.png" alt="صورة 2">
-            <h5>نص الصورة 2</h5>
+            <h5>نحن نؤمن بأن الجودة والقيمة لا تعني الضغط على الميزانية. وبفضل أسعارنا المريحة والمناسبة، يمكننا ضمان تحقيق أهدافك وانجاز أعمالك بكفاءة وفعالية دون إرهاق مالي زائد.</h5>
         </div>
 
         <!-- الصورة الثالثة -->
         <div class="image-box">
             <img src="https://icon-icons.com/downloadimage.php?id=149999&root=2484/PNG/512/&file=clock_icon_149999.png" alt="صورة 3">
-            <h5>نص الصورة 3</h5>
+            <h5>في منصة Unique، نحن نفهم حجم التحديات التي تواجهها في إدارة وقتك وانجاز المشاريع بكفاءة وفاعلية. لذلك، نحن نسعى جاهدين لتوفير حلول تناسب احتياجاتك وتساعدك في تحقيق أهدافك بشكل موثوق وفعال.</h5>
         </div>
 
         <!-- الصورة الرابعة -->
         <div class="image-box">
             <img src="https://icon-icons.com/downloadimage.php?id=150050&root=2486/PNG/512/&file=diploma_icon_150050.png" alt="صورة 4">
-            <h5>نص الصورة 4</h5>
+            <h5>تعتبر دورات التدريب على منصة Unique فرصة رائعة للحصول على المعرفة والمهارات التي تحتاجها في مجالك المهني أو الشخصي
+            عندما تقوم بالتواصل مع فريق Unique لنشر إعلان دورة تدريبية.</h5>
         </div>
 
         <!-- الصورة الخامسة -->
         <div class="image-box">
             <img src="https://icon-icons.com/downloadimage.php?id=150173&root=2491/PNG/512/&file=digital_marketing_icon_150173.png" alt="صورة 5">
-            <h5>نص الصورة 5</h5>
+            <h5>منصة Unique، تمكنك  من نشر فرص التوظيف  وتوظيف الأشخاص المهرة والاطلاع على أعمالهم من خلال البروفايل الخاص بكل شخص.</h5>
         </div>
 
         <!-- الصورة السادسة -->
         <div class="image-box">
             <img src="https://icon-icons.com/downloadimage.php?id=150004&root=2484/PNG/512/&file=forum_icon_150004.png" alt="صورة 6">
-            <h5>نص الصورة 6</h5>
+            <h5>منصة Unique هي المنصة المثالية للأشخاص الذين يبحثون عن وظائف في مجالات مختلفة ابحث عن وظيفتك المثالية اليوم وانطلق في مسارك المهني بثقة ونجاح .</h5>
         </div>
     </div>
 
@@ -1015,9 +971,11 @@ style="display: block; margin: 0 auto; width: 150px; height: 200px;">
       <div class="carousel-item active text-center p-4">
         <blockquote class="blockquote text-center">
           <p class="mb-0"><i class="fa fa-quote-left"></i>
-     SudanPalette is an online gallery site that showcases paintings and sculptures by Sudanese artists.  The website aims to promote talented Sudanese in the field of art and provide a platform to display their work and communicate with the general public and those interested in visual arts.
+     قسم الخدمات:
+في منصة Unique، يمكنك الاستفادة من خدمات متنوعة في مجالات البرمجة وتطوير المواقع وتطبيقات الجوال، وتصميم الجرافيك ومقاطع الفيديو المتحركة. يمكنك طلب الخدمات سواء من فريق Unique المتخصص أو من الخبراء الذين يمتلكون ملفات بروجكت في المنصة. ستحصل على جودة عالية وخدمات متميزة تلبي احتياجاتك.
+
           </p>
-          <footer class="blockquote-footer">Albert Einstein <cite title="Source Title">genius</cite></footer>
+          <footer class="blockquote-footer">unique <cite title="Source Title">genius</cite></footer>
           <!-- Client review stars -->
           <!-- "fas fa-star" for a full star, "far fa-star" for an empty star, "far fa-star-half-alt" for a half star. -->
           <p class="client-review-stars">
@@ -1031,9 +989,10 @@ style="display: block; margin: 0 auto; width: 150px; height: 200px;">
       </div>
       <div class="carousel-item text-center p-4">
         <blockquote class="blockquote text-center">
-          <p class="mb-0"><i class="fa fa-quote-left"></i> Sudanese artists can display their artwork in various styles and techniques, including painting, photography, and sculpture.  The works are categorized into different categories according to style, technique, and subject matter.  This makes it easier for visitors to easily browse and discover the works of their favorite artists..
+          <p class="mb-0"><i class="fa fa-quote-left"></i> قسم الدورات التدريبية:
+          تقدم منصة Unique دورات تدريبية متنوعة في مختلف المجالات. يتم نشر وعرض هذه الدورات على المنصة، كما يمكن للأشخاص طلب نشر دورات تدريبية خاصة بهم بنسبة معينة للإعلان عنها. ستجد في هذا القسم فرصًا قيمة لتطوير مهاراتك واكتساب المعرفة اللازمة في مجالك المفضل.
           </p>
-          <footer class="blockquote-footer">Albert Einstein <cite title="Source Title">genius</cite></footer>
+          <footer class="blockquote-footer">unique <cite title="Source Title">genius</cite></footer>
           <!-- Client review stars -->
           <!-- "fas fa-star" for a full star, "far fa-star" for an empty star, "far fa-star-half-alt" for a half star. -->
           <p class="client-review-stars">
@@ -1047,9 +1006,11 @@ style="display: block; margin: 0 auto; width: 150px; height: 200px;">
       </div>
       <div class="carousel-item text-center p-4">
         <blockquote class="blockquote text-center">
-          <p class="mb-0"><i class="fa fa-quote-left"></i> The site also provides detailed information about each artist, including their bio and career profile.  Visitors can also purchase paintings and sculptures through the site, either as individual pieces or in the artists' virtual exhibitions..
+          <p class="mb-0"><i class="fa fa-quote-left"></i> قسم الوظائف:
+يمكن للأشخاص نشر وظائف شاغرة وطلب موظفين في المجالات المختلفة. يمكن للزوار البحث عن وظيفة مناسبة لهم أو البحث عن المواهب المتاحة عن طريق المنصة. تعمل منصة Unique كوسيط بين طالب الخدمة ومقدم الخدمة، مما يتيح فرصًا رائعة للتواصل وتحقيق التوافق في مجال العمل.
+
           </p>
-          <footer class="blockquote-footer">Albert Einstein <cite title="Source Title">genius</cite></footer>
+          <footer class="blockquote-footer">unique <cite title="Source Title">genius</cite></footer>
           <!-- Client review stars -->
           <!-- "fas fa-star" for a full star, "far fa-star" for an empty star, "far fa-star-half-alt" for a half star. -->
           <p class="client-review-stars">
@@ -1069,48 +1030,64 @@ style="display: block; margin: 0 auto; width: 150px; height: 200px;">
     </ol>
   </div>
 </div>
-
+<hr>
   <div class="accordion">
     
     <div class="accordion-item">
       <h1>الآسئلة الشائعة</h1>
-      <button class="accordion-btn">ما هو unique ؟
+      <button class="accordion-btn">ما ماهي منصة unique ؟
       <i class="fas fa-chevron-down"></i> </button>
       <div class="accordion-content">
-        <p>HTML (Hypertext Markup Language) is the standard markup language for creating web pages.</p>
+        <p>Unique هي منصة تكنولوجية وتصميم مبتكرة تساعدك على تحقيق أهدافك في مجال التكنولوجيا والابتكار. تجد فيها خدمات متنوعة مثل البرمجة وتطوير التطبيقات والتصميم الجرافيكي وإدارة الصفحات الإلكترونية. توفر أيضًا دورات تدريبية لتطوير مهاراتك وفرص وظيفية في مجال تقنية المعلومات والتصميم. Unique تعمل كوسيط بين طالب الخدمة ومقدم الخدمة لتسهيل تنفيذ المشروعات بكفاءة ومرونة. إنضم اليوم وتحقق رؤيتك في عالم الإبداع والتقنية.</p>
       </div>
     </div>
 
     <div class="accordion-item">
       <button class="accordion-btn">
-         كيف أستفيد منه؟
+         كيف أستفيد من المنصة؟
          <i class="fas fa-chevron-down"></i> </button>
       <div class="accordion-content">
-        <p>CSS (Cascading Style Sheets) is a style sheet language used for describing the look and formatting of a document written in HTML.</p>
+        <p>يمكنك الاستفادة من منصة Unique عبر:
+        
+        تطوير مهاراتك التقنية والإبداعية.
+        التواصل مع محترفين في مجالات مختلفة.
+        استشارة وتلقي نصائح قيمة.
+        نشر مشاريعك وتنفيذها.
+        الحصول على عروض من مقدمي الخدمات.
+        نشر فرص الوظائف الخاصة بك.
+        الوصول إلى فرص وشركاء مناسبين.
+        تحقيق أهدافك في التكنولوجيا والابتكار.</p>
       </div>
     </div>
 
     <div class="accordion-item">
-      <button class="accordion-btn">ما هي المجالات التي يمكنني أن أوظف فيها مستقلين عن بعد؟
+      <button class="accordion-btn">ما هي المجالات التي يمكنني أن أوظف فيها اشخاص عن بعد؟
       <i class="fas fa-chevron-down"></i> </button>
       <div class="accordion-content">
-        <p>JavaScript is a high-level, interpreted programming language used to make web pages interactive.</p>
+        <p>تروّج منصة Unique للتوظيف عن بُعد في جميع المجالات! سواء كنت تبحث عن محلل بيانات، مطور ويب، مصمم جرافيك، مدير مشروع، كاتب محتوى، مترجم، خبير تسويق، أو أي مجال آخر، يمكنك نشر إعلان توظيفك وجذب المواهب المهرة في مجالك المفضل.</p>
       </div>
     </div>
         <div class="accordion-item">
           <button class="accordion-btn">كيف يضمن موقع unique حقوقي؟
           <i class="fas fa-chevron-down"></i> </button>
           <div class="accordion-content">
-            <p>JavaScript is a high-level, interpreted programming language used to make web pages interactive.</p>
+            <p>
+
+ حماية الملكية الفكرية يتم تشجيع المستخدمين على احترام حقوق الملكية الفكرية وعدم انتهاكها إذا واجهت أي انتهاكات محتملة لحقوقك يمكنك الإبلاغ عنها لفريق الدعم في Unique وسيتم اتخاذ الإجراءات اللازمة.
+
+ الاتفاقيات والشروط يعتبر Unique منصة مبتكرة تعتمد على اتفاقية المستخدم وشروط الاستخدام التي تحمي الحقوق وتحدد المسؤوليات والواجبات للمستخدمين والمشتركين في المنصة.
+
+ ضمان الخصوصية والأمان تضمن Unique حماية خصوصية المستخدمين وبياناتهم الشخصية وتتبع أعلى معايير الأمان لضمان عدم انتهاك حقوقك الشخصية.
+
+ التشفير والأمان الرقمي يتم استخدام تقنيات التشفير المتقدمة لحماية بيانات مستخدمي Unique وضمان أمان المعلومات الشخصية والمشاركات على المنصة.
+
+فريق الدعم والمساعدة يتوفر فريق دعم متخصص في Unique للمساعدة في حل أي مشكلات أو توضيح أي استفسارات قد تواجهك فيما يتعلق بحقوقك على المنصة.
+
+سياسة الإبلاغ عن المخالفات يوجد في Unique نظام للإبلاغ عن المخالفات حيث يمكنك الإبلاغ عن أي محتوى ينتهك حقوقك أو حقوق الآخرين وسيتم التعامل معه بشكل فوري.
+
+</p>
           </div>
-        </div>
-            <div class="accordion-item">
-              <button class="accordion-btn">لماذا التوظيف عن بعد عبر مستقل هو الخيار الأفضل لي؟
-              <i class="fas fa-chevron-down"></i> </button>
-              <div class="accordion-content">
-                <p>JavaScript is a high-level, interpreted programming language used to make web pages interactive.</p>
-              </div>
-            </div>
+
 <h2>دورات تدريبية</h2>
 <img src="/reading_books_icon_176864.png" alt="وصف الصورة"
 style="display: block; margin-left: 60%; width: 150px; height: 200px;">
@@ -1132,10 +1109,11 @@ style="display: block; margin-left: 60%; width: 150px; height: 200px;">
         </div>
     </div>
 <div class="moon">
-  <img src="/صورة مووون.png" alt="صورة" width="300" height="500" class="image">
+  <img src="https://icon-icons.com/downloadimage.php?id=176878&root=2774/PNG/512/&file=add_application_icon_176878.png" alt="صورة" width="300" height="500" class="image">
   <div class="text-container">
-    <h3>Order your paintings</h3>
-    <p>Ordering handmade painting, sketch drawing, watercolor painting, oil pastel drawing - any painting you order.</p>
+    <h3>طريقة التواصل مع فريق unique </h3>
+    <p>يمكنك التواصل مع فريق Unique عبر المنصة بسهولة من خلال إرسال رسائلك واستفساراتك مباشرة. كما يمكنك الاتصال بالفريق عن طريق الهاتف أو إرسال بريد إلكتروني، أو صفحات التواصل الاجتماعي.
+    لا تتردد في التواصل لتلقي المساعدة التي تحتاجها أو لمشاركة أفكارك واقتراحاتك أو طلباتك.</p>
     <p class="contact">Contact us:</p>
     <p class="contact">+249902707192</p>
         <p class="contact">unique2tow@gmail.com</p>
@@ -1145,29 +1123,8 @@ style="display: block; margin-left: 60%; width: 150px; height: 200px;">
   </center>
 
 <center>
-<div class="card-form">
-        <h3>تسجيل الدخول</h3>
-        <form id="loginForm">
-            <label for="username">اسم المستخدم:</label>
-            <input type="text" id="username" name="username"><br><br>
-            <label for="password">كلمة المرور:</label>
-            <input type="password" id="password" name="password"><br><br>
-            <button type="submit" id="loginButton">تسجيل الدخول</button>
-        </form>
-    </div>
 
-    <div class="card-form">
-        <h3>إنشاء حساب</h3>
-        <form id="signupForm">
-            <label for="newUsername">اسم المستخدم:</label>
-            <input type="text" id="newUsername" name="newUsername"><br><br>
-            <label for="newPassword">كلمة المرور:</label>
-            <input type="password" id="newPassword" name="newPassword"><br><br>
-            <button type="submit" id="signupButton">إنشاء حساب</button>
-        </form>
-    </div>
-</center>
-
+  
 
 
   </body>
@@ -1219,35 +1176,6 @@ style="display: block; margin-left: 60%; width: 150px; height: 200px;">
     });
   });
   
-// التفاعل مع الفورم لتسجيل الدخول
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // منع إرسال النموذج
-
-  // قم بجلب قيم المدخلات
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-
-  // هنا يمكنك إجراء عمليات التحقق والمعالجة الخاصة بتسجيل الدخول
-  // على سبيل المثال، يمكنك إجراء طلب إلى خادم للتحقق من البيانات
-
-  // إظهار رسالة نجاح أو فشل
-  alert(`مرحبًا ${username}! تم تسجيل الدخول بنجاح.`);
-});
-
-// التفاعل مع الفورم لإنشاء حساب
-document.getElementById("signupForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // منع إرسال النموذج
-
-  // قم بجلب قيم المدخلات
-  const newUsername = document.getElementById("newUsername").value;
-  const newPassword = document.getElementById("newPassword").value;
-
-  // هنا يمكنك إجراء عمليات التحقق والمعالجة الخاصة بإنشاء الحساب
-  // على سبيل المثال، يمكنك إرسال بيانات الحساب إلى خادم لحفظها
-
-  // إظهار رسالة نجاح أو فشل
-  alert(`تم إنشاء حساب ${newUsername} بنجاح.`);
-});
 
 //زر انتقال إلى اعلي
 // احتفظ بالارتفاع الأصلي للزر
@@ -1306,7 +1234,7 @@ window.addEventListener("load", function() {
         </div>
       </div>
       <div class="footer-text">
-        <h6>© 2023 Your Website. All rights reserved.</h6>
+        <h6>© 2023  جميع الحقوق محفوظة للمنصة يونيك  .</h6>
       </div>
       <div class="footer-payment">
         <i class="fab fa-cc-visa"></i>
