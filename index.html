@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar"> <!-- لغة الموقع العربية -->
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <title>unique</title>
-    <style>
-
-body{
+     <link rel="stylesheet" href="style.css">
+<style>
+  body{
   background-color :#fdfdfd;
 }
 /* إزالة الهوامش بشكل قطعي على أحجام الجوال */
@@ -34,7 +34,6 @@ body{
         margin: 0 !important;
     }
 }
-
 
 /* استهداف النجوم وتحديد لونها إلى الذهبي */
 .fa-star {
@@ -87,8 +86,6 @@ transform: translateX(0);
   }
 }
 
-
-
 .social-icons {
   display: flex;
   justify-content: space-between;
@@ -107,14 +104,6 @@ transform: translateX(0);
 .social-icons a:hover {
   transform: scale(1.2);
 }
-
-
-
-
-
-
-
-
 
 
 .footer {
@@ -457,7 +446,7 @@ h3{
 .contact {
   background-color: #0071bc ;
   color: #fff;
-  font-size :16px;
+  font-size :14px;
   font-style: bold;
   padding: 5px; /* إضافة هامش داخلي لعنصر Contact */
   color: #fff; /* تغيير لون النص داخل عنصر Contact إلى الأسود */
@@ -679,7 +668,7 @@ h6{
   border: 1px solid #ccc;
   border-top: none;
   border-radius: 0 0 5px 5px;
-  background-color: white;
+  background-color: #f2f3f4;
   
 }
 
@@ -728,7 +717,7 @@ h6{
 
 h6.animated-text {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: infiniteSlide 5s infinite;
@@ -775,6 +764,7 @@ h6.animated-text {
 }
 
 .icon.fas.fa-globe {
+  color :#fff;
     position: absolute;
     top:70px;
     bottom: 20px;
@@ -823,8 +813,6 @@ animation: spin 2s linear infinite;
 
 </style>
 </head> 
-
-
  <body>
 
 <div id="loading-screen">
@@ -832,19 +820,16 @@ animation: spin 2s linear infinite;
 </div>
 <header>
     <div class="header-content">
-          <img src="https://up6.cc/2023/09/169565494754982.jpg" alt="صورة" width="100%" height="400px">
-          <h6 class="animated-text">   حول أفكارك إلى واقع . </h6>
+          <img src="https://i.gifer.com/embedded/download/J4o.gif" alt="صورة" width="100%" height="400px">
+          <h6 class="animated-text">   حول أفكارك إلى واقع </h6>
           <div class="read-more">
-            <a href="#">اقرأ المزيد</a>
+            <a href="#">أقراء المذيد </a>
             <i class="icon fas fa-globe"></i>
           </div>
         </div>
         
     </header>
   
-
-  
-
   <h1>هل لديك عمل تريد إنجازه؟ </h1>
   <h4><i class="icon fas fa-award"></i> أضافة  مشروع</h4>
   <p>أضف مشروعك على منصة Unique!
@@ -1088,7 +1073,8 @@ style="display: block; margin: 0 auto; width: 150px; height: 200px;">
 سياسة الإبلاغ عن المخالفات يوجد في Unique نظام للإبلاغ عن المخالفات حيث يمكنك الإبلاغ عن أي محتوى ينتهك حقوقك أو حقوق الآخرين وسيتم التعامل معه بشكل فوري.
 
 </p>
-          </div>
+
+</div>
 
 <h2>دورات تدريبية</h2>
 <img src="https://icon-icons.com/downloadimage.php?id=176864&root=2774/PNG/512/&file=reading_books_icon_176864.png" alt="وصف الصورة"
@@ -1125,36 +1111,25 @@ style="display: block; margin-left: 60%; width: 150px; height: 200px;">
   </center>
 
 <center>
-
-  
-
-
   </body>
-
-
-
-
-
 <script src="main.js"></script>
-
-     <script>
-     //
-// إزالة الهوامش وضبط العرض
-      function adjustPageLayout() {
-        document.body.style.margin = "0";
-        document.body.style.padding = "0";
-        document.documentElement.style.width = "100%";
-        document.body.style.width = "100%";
-        document.documentElement.style.overflowX = "hidden";
-      }
-      
-      // استدعاء الدالة عند تحميل الصفحة
-      window.addEventListener("load", function() {
-        adjustPageLayout();
-      });
-        
-        //overly
-        document.addEventListener('DOMContentLoaded', function() {
+<script>
+  // إزالة الهوامش وضبط العرض
+  function adjustPageLayout() {
+    document.body.style.margin = "0";
+    document.body.style.padding = "0";
+    document.documentElement.style.width = "100%";
+    document.body.style.width = "100%";
+    document.documentElement.style.overflowX = "hidden";
+  }
+  
+  // استدعاء الدالة عند تحميل الصفحة
+  window.addEventListener("load", function() {
+    adjustPageLayout();
+  });
+  
+  //overly
+  document.addEventListener('DOMContentLoaded', function() {
     const imageBoxes = document.querySelectorAll('.image-box');
   
     imageBoxes.forEach(box => {
@@ -1178,44 +1153,44 @@ style="display: block; margin-left: 60%; width: 150px; height: 200px;">
     });
   });
   
-
-//زر انتقال إلى اعلي
-// احتفظ بالارتفاع الأصلي للزر
-// انتظر حتى تتم تحميل الصفحة بالكامل
-document.addEventListener("DOMContentLoaded", function() {
-  // استهداف الزر
-  var animateButton = document.getElementById("animate-button");
-
-  // إضافة حدث النقر (الضغط) إلى الزر
-  animateButton.addEventListener("click", function() {
-    // قم بالتمرير إلى الجزء العلوي من الصفحة بسرعة
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth" // لتوفير تأثير التمرير الناعم
+  
+  //زر انتقال إلى اعلي
+  // احتفظ بالارتفاع الأصلي للزر
+  // انتظر حتى تتم تحميل الصفحة بالكامل
+  document.addEventListener("DOMContentLoaded", function() {
+    // استهداف الزر
+    var animateButton = document.getElementById("animate-button");
+  
+    // إضافة حدث النقر (الضغط) إلى الزر
+    animateButton.addEventListener("click", function() {
+      // قم بالتمرير إلى الجزء العلوي من الصفحة بسرعة
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth" // لتوفير تأثير التمرير الناعم
+      });
     });
   });
-});
-// العثور على العناصر الأكورديون
-const accordionItems = document.querySelectorAll('.accordion-item');
-
-// إضافة حدث النقر إلى زر الأكورديون
-accordionItems.forEach((item) => {
-  const button = item.querySelector('.accordion-btn');
-  button.addEventListener('click', () => {
-    // إزالة النشاط من كل العناصر
-    accordionItems.forEach((otherItem) => {
-      otherItem.classList.remove('active');
+  // العثور على العناصر الأكورديون
+  const accordionItems = document.querySelectorAll('.accordion-item');
+  
+  // إضافة حدث النقر إلى زر الأكورديون
+  accordionItems.forEach((item) => {
+    const button = item.querySelector('.accordion-btn');
+    button.addEventListener('click', () => {
+      // إزالة النشاط من كل العناصر
+      accordionItems.forEach((otherItem) => {
+        otherItem.classList.remove('active');
+      });
+  
+      // إضافة النشاط إلى العنصر المناسب
+      item.classList.toggle('active');
     });
-
-    // إضافة النشاط إلى العنصر المناسب
-    item.classList.toggle('active');
   });
-});
-//loading
-window.addEventListener("load", function() {
-  const loader = document.getElementById("loading-screen");
-  loader.classList.add("hide");
-});
+  //loading
+  window.addEventListener("load", function() {
+    const loader = document.getElementById("loading-screen");
+    loader.classList.add("hide");
+  });
 </script>
 </body>
   <footer class="footer">
@@ -1244,7 +1219,4 @@ window.addEventListener("load", function() {
         <i class="fab fa-cc-paypal"></i>
       </div>
     </footer>
-    
-
-
 </html>
