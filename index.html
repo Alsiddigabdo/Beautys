@@ -152,9 +152,9 @@ transform: translateX(0);
 }
 
 .footer-left img {
-  max-width: 100px;
+  max-width: 35px;
   margin-top:0px ;
-  margin-right: 0px;
+  margin-right: 60px;
   left:100px;
   top:80px ;
 }
@@ -193,6 +193,7 @@ transform: translateX(0);
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  width :100px;
 }
 
 .footer-right {
@@ -754,7 +755,7 @@ h6{
 
 h6.animated-text {
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: infiniteSlide 5s infinite;
@@ -884,17 +885,60 @@ animation: spin 2s linear infinite;
     justify-content: center; /* يوسط النجوم أفقياً */
     align-items: center; /* يوسط النجوم عمودياً */
 }
+    .header {
+            width: 100%;
+            height :60px;
+background-color: var(--main-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 5px;
+            color: white;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #1557a3;
+        }
+
 </style>
 </head> 
  <body>
-
+<header class="header">
+    <div class="logo-container">
+        <img src="https://up6.cc/2023/09/169574573427772.png" alt="Logo" class="logo">
+    </div>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+</header>
 <div id="loading-screen">
   <div class="loader"></div>
 </div>
 <header>
     <div class="header-content">
           <img src="https://up6.cc/2023/09/169574122492342.jpg" alt="صورة" width="100%" height="400px">
-          <h6 class="animated-text">   حول أفكارك إلى واقع </h6>
+          <h6 class="animated-text">   "صنع الأحلام، تحقيق الإبداع، ريادة التميز."</h6>
           <div class="read-more">
             <a href="#">أقراء المذيد </a>
             
@@ -1331,7 +1375,7 @@ fetchStatistics();
   <footer class="footer">
       <div class="footer-content">
         <div class="footer-left">
-          <img src="https://up6.cc/2023/09/169574128566142.png" alt="Website Logo">
+          <img src="https://up6.cc/2023/09/169574573427772.png" alt="Website Logo">
           <div class="social-icons">
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
