@@ -109,12 +109,24 @@ transform: translateX(0);
 }
 
 
+
+/* اللون الرئيسي */
+:root {
+  --main-color: #357EC7;
+}
+
+/* اللون الثانوي (اصفر خفيف) */
+:root {
+  --secondary-color: #FFFF99; /* يمكنك تغيير القيمة حسب اللون الأصفر الذي تفضله */
+}
+
+/* تستخدم الألوان في القواعد الأخرى */
 .footer {
-  background-color: #0071bc ;
+  background-color: var(--main-color); /* استخدام اللون الرئيسي كخلفية الـ .footer */
   color: #fff;
   padding: 20px;
   text-align: center;
-  margin-top :0px;
+  margin-top: 0px;
 }
 
 .footer-content {
@@ -742,12 +754,12 @@ h6{
 
 h6.animated-text {
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: infiniteSlide 5s infinite;
-    font-size: 26px;
-    color: #fff;
+    font-size: 30px;
+    color: #ffff00 ;
     font-style: bold;
     font-family: 'Lateef', cursive;
 }
@@ -769,7 +781,7 @@ h6.animated-text {
 
 .read-more {
     position: absolute;
-    bottom: 50px;
+    bottom: 10px;
     height: 50px;
     left: 50%;
     transform: translateX(-50%);
@@ -881,7 +893,7 @@ animation: spin 2s linear infinite;
 </div>
 <header>
     <div class="header-content">
-          <img src="https://i.gifer.com/embedded/download/J4o.gif" alt="صورة" width="100%" height="400px">
+          <img src="https://up6.cc/2023/09/169574122492342.jpg" alt="صورة" width="100%" height="400px">
           <h6 class="animated-text">   حول أفكارك إلى واقع </h6>
           <div class="read-more">
             <a href="#">أقراء المذيد </a>
@@ -962,8 +974,8 @@ style="display: block; margin: 0 auto; width: 150px; height: 200px;">
             </a>
         </div>
                 <div class="card">
-                  <h>إدارة صفحات</h>
-                  <img src="/أيقونة إدارة الصفحات.png" alt="Card 6" class="card-img">
+                  <h> كتابة محتوي</h>
+                  <img src="https://icon-icons.com/downloadimage.php?id=182968&root=2898/PNG/512/&file=write_notes_exam_icon_182968.png" alt="Card 6" class="card-img">
                   <a href="رابط الصفحة الهدف">
                     <button class="order-button">اطلب الآن</button>
                   </a>
@@ -1144,16 +1156,16 @@ style="display: block; margin-left: 60%; width: 150px; height: 200px;">
 <div class="your-custom-card-container">
         <div class="your-custom-card">
           <h>دورات تعلم أساسيات الحاسوب</h>
-            <img src="/slider-2.jpg" alt="Card Image">
+            <img src="https://up6.cc/2023/09/1695742550222.jpg" alt="Card Image">
             
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod ex ut nulla condimentum.</p>
+            <p>لاتتوفر دورة تدريبية حاليآ</p>
             <a href="your-link.html" class="animate-button">سجل الآن</a>
         </div>
         <div class="your-custom-card">
-          <h>دورة تعليم الفوتشوب</h>
-            <img src="/slider-1.jpg" alt="Card Image">
+          <h>دورة التصميم والجرافيك </h>
+            <img src="https://up6.cc/2023/09/1695742550222.jpg" alt="Card Image">
             
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod ex ut nulla condimentum.</p>
+            <p>لاتتوفر دورة تدريبية حاليآ</p>
             <a href="your-link.html" class="animate-button">سجل الآن</a>
         </div>
     </div>
@@ -1319,7 +1331,7 @@ fetchStatistics();
   <footer class="footer">
       <div class="footer-content">
         <div class="footer-left">
-          <img src="/ صورة الشعار.png" alt="Website Logo">
+          <img src="https://up6.cc/2023/09/169574128566142.png" alt="Website Logo">
           <div class="social-icons">
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
