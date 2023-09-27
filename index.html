@@ -1000,7 +1000,73 @@ background-color: var(--main-color);
           0 0 0 4px white;
 }
 
+/* CSS styles here */
+        .project {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+        }
 
+        .photo {
+            text-align: center;
+        }
+
+        .photo img {
+            max-width: 600px;
+            height: 600px;
+        }
+
+        .text {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 20px;
+            color: #0071bc;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .demo-button, .purchase-button {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .demo-button:hover, .purchase-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style the Next and Previous buttons */
+        .prev-button,
+        .next-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            line-height: 40px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .prev-button:hover, .next-button:hover {
+            background-color: #555;
+        }
+@media (max-width: 768px) {
+  .photo img {
+    width: 100%;
+    height: 500px;
+  }
+}
 
 </style>
 </head> 
@@ -1276,7 +1342,24 @@ style="display: block; margin: 0 auto; width: 150px; height: 200px;">
 </p>
 
 </div>
-
+  <h1>مشاريع فريق unique؟ </h1>
+<div class="project">
+      <div class="photo">
+        <img src="photo1.jpg" alt="Photo">
+        <div class="buttons">
+          <button class="prev-button">&#9664;</button>
+          <button class="next-button">&#9654;</button>
+        </div>
+      </div>
+<div class="text">
+    <text id="text-content">Some text here</text>
+</div>
+      <div class="buttons">
+        <a href="demo-url" class="demo-button"><i class="fas fa-eye"></i> Live Demo</a>
+        <a href="purchase-url" class="purchase-button"><i class="fas fa-shopping-cart"></i> Purchase</a>
+      </div>
+    </div>
+    
 <h2>دورات تدريبية</h2>
 <img src="https://icon-icons.com/downloadimage.php?id=176864&root=2774/PNG/512/&file=reading_books_icon_176864.png" alt="وصف الصورة"
 style="display: block; margin-left: 60%; width: 150px; height: 200px;">
@@ -1463,6 +1546,42 @@ setInterval(fetchStatistics, 1000);
 
 // أول استدعاء لجلب الإحصائيات
 fetchStatistics();
+//كود إضافة مشروع
+// JavaScript code here
+const photos = ["Screenshot_٢٠٢٣٠٩٢٧_١١٠١٥٨.jpg", "https://up6.cc/2023/09/169580553399963.jpg", "", ""];
+let currentIndex = 0;
+
+const photoElement = document.querySelector(".photo img");
+const prevButton = document.querySelector(".prev-button");
+const nextButton = document.querySelector(".next-button");
+const textElement = document.getElementById("text-content"); // العنصر النصي
+
+prevButton.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+  updatePhotoAndText();
+});
+
+nextButton.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % photos.length;
+  updatePhotoAndText();
+});
+
+function updatePhotoAndText() {
+  photoElement.src = photos[currentIndex];
+
+  // تغيير النص مع كل صورة
+  const newText = [
+    "متجر إلكتروني بتصميم جميل ",
+    " تطبيق صفحة ويب حجز موعد عند طبيب يتم استلام الحجوزات عبر خدمة emailjs المجانية ",
+    "نص جديد 3",
+    "نص جديد 4"
+  ];
+  textElement.textContent = newText[currentIndex];
+}
+
+updatePhotoAndText();
+
+        
 </script>
 </body>
   <footer class="footer">
