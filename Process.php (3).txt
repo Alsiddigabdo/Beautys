@@ -1,0 +1,53 @@
+<?php
+// اتصال بقاعدة البيانات
+$host = 'localhost'; // اسم خادم قاعدة البيانات
+$db = 'database_name'; // اسم قاعدة البيانات
+$username = 'dataWarehouse_789'; // اسم المستخدم للاتصال بقاعدة البيانات
+$password = 'dataWarehouse_790'; // كلمة مرور المستخدم للاتصال بقاعدة البيانات
+
+try {
+$conn = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $username, $password);
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+ if (isset($_POST['submit'])) {
+ // جلب محتوى الصفحة
+ $pageContent = file_get_contents('https://example.com/dashboard');
+
+ // استخراج قيم المعلومات باستخدام تعابير القوائم العادية
+preg_match('/<span id="usersCount">([\d,]+)<\/span>/', $pageContent, $usersCountMatch);
+preg_match('/<span id="onlineUsers">([\d,]+)<\/span>/', $pageContent, $onlineUsersMatch);
+preg_match('/<span id="newVisits">([\d,]+)<\/span>/', $pageContent, $newVisitsMatch);
+
+// عرض النتائج
+ $usersCount = $usersCountMatch[1];
+ $onlineUsers = $onlineUsersMatch[1];
+ $newVisits = $newVisitsMatch[1];
+
+// استقبال البيانات من النموذج
+ $service = $_POST['service'];
+$name = $_POST['name'];
+ $phone = $_POST['phone'];
+ $country = $_POST['country'];
+ $description = $_POST['description'];
+
+ // إدخال البيانات في قاعدة البيانات
+ $stmt = $conn->prepare("INSERT INTO requests ( name, phone, country, description) VALUES ( :name, :phone, :country, :description)");
+
+ $stmt->bindParam(':name', $name);
+ $stmt->bindParam(':phone', $phone);
+ $stmt->bindParam(':country', $country);
+ $stmt->bindParam(':description', $description);
+ $stmt->execute();
+
+ // رسالة تأكيد إرسال الطلب
+ echo "<script>alert('تم ارسال الطلب!')</script>";
+
+ // قم بتحويل المستخدم إلى صفحة أخرى بعد الانتهاء إذا لزم الأمر
+ // يمكن استخدام header("Location: صفحة_أخرى.php"); لتوجيه المستخدم
+ header("Location: صفحة_أخرى.php");
+exit;
+ }
+} catch (PDOException $e) {
+echo "فشل الاتصال بقاعدة البيانات: " . $e->getMessage();
+}
+?>

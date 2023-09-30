@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+    
+    
+    <title>unique</title>
+     <link rel="stylesheet" href="style.css">
+<style>
+  
+    body{
+  background-color :#fdfdfd;
+  font-family: 'Lateef', cursive;
+  font-size :20px;
+  margin: 0px; 
+  padding:0px;
+  
+}
+/* إزالة الهوامش بشكل قطعي على أحجام الجوال */
+@media screen and (max-width: 767px) {
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100vw !important;
+        overflow-x: hidden !important;
+
+    }
+    .container, .container-fluid {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+
+
+    form {
+      max-width: 400px;
+      width: 100%;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      direction: rtl;
+      margin-top: 150px;
+      margin-bottom: 150px ;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      direction: rtl;
+    }
+
+    textarea {
+      height: 150px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    
+   
+/* يجعل حواف المستطيل دائرية */
+.toolbar {
+  font-family: 'Lateef', cursive;
+  position: fixed;
+  left: 50%;
+  bottom: 2px;
+  transform: translateX(-50%);
+  width: 98%;
+  height: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* توسيط الأيقونات عموديًا */
+  background-color: rgba(255, 255, 255, 0.5); /* جعل الخلفية شفافة */
+  backdrop-filter: blur(5px);
+  padding: 40px;
+  border-radius: 10px; /* تعديل حجم الحواف الدائرية */
+  border: 2px solid black; /* جعل حواف الـ border بلون أسود */
+  z-index: 9999;
+}
+a {
+  color: #357EC7; /* لون الأيقونة الأبيض */
+}
+
+a:hover {
+  color: #0071bc; /* لون الأيقونة عند التحويم عليها */
+}
+
+
+.fixed-link {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.fixed-link a {
+  display: block;
+  background-color: black;
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  
+  color: # ;
+}
+
+.fixed-link a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+@media (max-width: 768px) {
+    .icon {
+        font-size: 24px; /* حجم الأيقونات في العرض الهاتفي */
+        margin-right: 0; /* إزالة التباعد بين الأيقونات */
+        margin-bottom: 5px; /* إضافة مسافة بين الأيقونات عموديًا */
+    }
+
+    .icon span {
+        display: block; /* جعل النص ظهر كبلوك (سطر جديد) تحت الأيقونة */
+        font-size: 24px; /* حجم النص تحت الأيقونة */
+        text-align: center; /* مركز النص */
+        color:black ;
+    }
+}
+
+/* تخصيص الأيقونات */
+        .icon {
+            font-size: 24px;
+            margin-right: 5px;
+            color: #fferent;
+        }
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color:#357EC7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    color: white;
+    background-size: 100%;
+    z-index: 9999; /* للتأكد من ظهور العنصر فوق كل العناصر الأخرى */
+}
+.logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #1557a3;
+        }
+.wrapper
+{
+  padding-bottom: 90px;
+}
+
+/* تستخدم الألوان في القواعد الأخرى */
+.footer {
+  background-color:#357EC7; /* استخدام اللون الرئيسي كخلفية الـ .footer */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  animation: slide-in 1s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.footer-left img {
+  max-width: 35px;
+  margin-top:0px ;
+  margin-right: 100px;
+  left:100px;
+  top:80px ;
+}
+
+.social-icons {
+  
+  display: flex;
+  gap: 10px;
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.social-icons a i {
+  font-size: 24px;
+  color: #fff;
+}
+
+.contact-form input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color:  #fff;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width :100px;
+}
+
+.footer-right {
+  animation: slide-in 1s ease-in-out;
+}
+
+.footer-payment {
+  margin-top: 20px;
+  padding-bottom: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade-in 1s ease-in-out;
+}
+
+.footer-payment i {
+  font-size: 36px;
+  margin: 0 10px;
+}
+
+.footer-text {
+  margin-top: 40px;
+  animation: fade-in 1s ease-in-out;
+  color:;
+}
+/* تنسيق الفوتر لشاشات الجوال */
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-left,
+  .social-icons,
+  .footer-right,
+  .footer-payment,
+  .footer-text {
+    margin: 10px 0;
+  }
+}
+
+h2{
+  font-size :45px;
+  font-family: 'Lateef', cursive;
+  color: darkblue;
+  direction: rtl;
+  margin-bottom: 40px;
+}
+  </style>
+
+  <script>
+    function handleSubmit() {
+      alert('تم ارسال الطلب!');
+      // يمكنك هنا إضافة مزيد من الأكواد لمعالجة النموذج أو إرساله إلى الخادم
+    }
+  </script>
+
+  <title>طلب خدمة</title>
+</head>
+<header class="header">
+        <div class="logo-container">
+            <img src="https://up6.cc/2023/09/169574573427772.png" alt="Logo" class="logo">
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </header>
+<body>
+  <center>
+  <form action="process.php" method="POST" onsubmit="handleSubmit(); return false;">
+  <form onsubmit="handleSubmit(); return false;">
+      </div>
+    
+    <h2> تصميم تطبيق</h2>
+    <p> املآء الفورم وسوف يتم التواصل معك</p>
+
+    <br>
+    <label for="name">الاسم الكامل:</label>
+    <input type="text" id="name" name="name">
+    <br>
+    <label for="phone">رقم الهاتف:</label>
+    <input type="text" id="phone" name="phone">
+    <br>
+    <label for="country">الدولة:</label>
+    <input type="text" id="country" name="country">
+    <br>
+    <label for="description">وصف المشروع والتفاصيل:</label>
+    <textarea id="description" name="description"></textarea>
+    <br>
+    <button type="submit">إرسال</button>
+  </form>
+  </center>
+  
+  <script src="main.js"></script>
+  <script>
+    document.getElementById("goBackButton").addEventListener("click", function() {
+      history.back();
+    });
+  </script>
+</body>
+<div class="toolbar">
+  <!-- أيقونة القائمة -->
+  <a href="/index.html" class="icon menu-icon"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+
+  <!-- أيقونة الرسائل -->
+  <a href="#" class="icon messages-icon"><i class="fas fa-user"></i><span>حسابي</span></a>
+
+  <!-- أيقونة المعرض -->
+  <a href="#" class="icon gallery-icon"><i class="fas fa-images"></i><span>المعرض</span></a>
+
+  <!-- أيقونة التحميل -->
+ <a href="#" id="goBackButton" class="icon download-icon"><i class="fas fa-arrow-right"></i><span>رجوع</span></a>
+  </div>
+</div>
+  <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <img src="https://up6.cc/2023/09/169574573427772.png" alt="Website Logo">
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <form class="contact-form">
+            <input type="email" placeholder="Enter your email">
+            <button type="ارسال">ارسال</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-text">
+        <h6>© 2023  جميع الحقوق محفوظة للمنصة يونيك  .</h6>
+      </div>
+      <div class="footer-payment">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+      </div>
+    </footer>
+</html>

@@ -1,0 +1,36 @@
+<?php
+if(isset($_POST['submit'])){
+  // جلب محتوى الصفحة
+  $pageContent = file_get_contents('https://example.com/dashboard');
+
+  // استخراج قيم المعلومات باستخدام تعابير القوائم العادية
+  preg_match('/<span id="usersCount">([\d,]+)<\/span>/', $pageContent, $usersCountMatch);
+  preg_match('/<span id="onlineUsers">([\d,]+)<\/span>/', $pageContent, $onlineUsersMatch);
+  preg_match('/<span id="newVisits">([\d,]+)<\/span>/', $pageContent, $newVisitsMatch);
+
+  // عرض النتائج
+  $usersCount = $usersCountMatch[1];
+  $onlineUsers = $onlineUsersMatch[1];
+  $newVisits = $newVisitsMatch[1];
+
+  // عرض النتائج في صفحة HTML
+  echo '
+  <div class="page-show">
+    <div class="icon">
+      <i class="fas fa-users"></i>
+      <text>عدد المستخدمين:</text>
+      <text id="usersCount">' . $usersCount . '</text>
+    </div>
+    <div class="icon">
+      <i class="fas fa-user-friends"></i>
+      <text>المتصلون الآن:</text>
+      <text id="onlineUsers">' . $onlineUsers . '</text>
+    </div>
+    <div class="icon">
+      <i class="fas fa-chart-line"></i>
+      <text>الزيارات الجديدة:</text>
+      <text id="newVisits">' . $newVisits . '</text>
+    </div>
+  </div>';
+}
+?>
